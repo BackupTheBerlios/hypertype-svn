@@ -1,0 +1,176 @@
+<!-- All files are relative to screens -->
+<!-- <FailureLesson> is the lesson to go to when the typist does not meet the performance requirements -->
+<!-- <RestartOnFailure> causes the lesson to simply restart if the typist does not meet the performance requirements -->
+<lessons>
+
+<!-- GLOBAL SETTINGS -->
+   <globals>
+      <AccuracyError>There were a lot of mistakes on that lesson.  Let's try it again.</AccuracyError>
+      <SpeedError>Typing rate on that lesson wasn't very fast.  Let's practice some more.</SpeedError>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy.</PostLessonMessage>
+      <RestartOnFailure>yes</RestartOnFailure>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <LineLength>50</LineLength>
+      <MinAccuracy>90</MinAccuracy>
+      <ProblemKeysLesson>no</ProblemKeysLesson>
+   </globals>
+   <ProblemKeysLesson>
+      <Name>ProblemKeys</Name>
+      <type>Practice</type>
+      <DisplayFile>ProblemKeys_display</DisplayFile>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <PreLessonMessage>Some keys gave you more trouble that lesson than others.  Let's practice them.</PreLessonMessage>
+   </ProblemKeysLesson>
+
+<!-- START LESSONS -->
+   <lesson>
+      <Name>TopRowSymbolsIntro</Name>
+      <DisplayFile>TopRowSymbolsIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+
+<!-- `~=+ keys -->
+   <lesson>
+      <Name>`~=+New</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>`~=+a;</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>`~=+PracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>`~=+a;</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>200</length>
+   </lesson>
+   <lesson>
+      <Name>`~=+PracticeRandom</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>`~=+a;</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>200</length>
+   </lesson>
+
+<!-- !@-_ keys -->
+   <lesson>
+      <Name>!@-_New</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>!@-_as;</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>!@-_PracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>!@-_as;</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>200</length>
+   </lesson>
+   <lesson>
+      <Name>!@-_PracticeRandom</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>!@-_as;</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>200</length>
+   </lesson>
+
+<!-- #$() keys -->
+   <lesson>
+      <Name>#$()New</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>#$()dfl;</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>#$()PracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>#$()dfl;</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>200</length>
+   </lesson>
+   <lesson>
+      <Name>#$()PracticeRandom</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>#$()dfl;</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>200</length>
+   </lesson>
+
+<!-- %^*& keys -->
+   <lesson>
+      <Name>%^*&amp;New</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>%^*&amp;fjk</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>%^*&amp;PracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>%^*&amp;fjk</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>200</length>
+   </lesson>
+   <lesson>
+      <Name>%^*&amp;PracticeRandom</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>%^*&amp;fjk</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>200</length>
+   </lesson>
+
+<!-- All Numbers practice -->
+   <lesson>
+      <Name>TopRowSymbolsPracticePhrases</Name>
+      <type>Practice</type>
+      <keys>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.,;:`~!@#$%^&amp;*()-=_+</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>300</length>
+      <TextGenerationStyle>Phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/TopRowSymbolPhrases.txt</PhraseListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>TopRowSymbolsPracticePhrases2</Name>
+      <type>Practice</type>
+      <keys>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.,;:`~!@#$%^&amp;*()-=_+</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>300</length>
+      <TextGenerationStyle>Phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/TopRowSymbolPhrases.txt</PhraseListPath>
+      <MinSpeed>12</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+</lessons>
+

@@ -1,0 +1,199 @@
+<!-- All files are relative to screens -->
+<!-- <FailureLesson> is the lesson to go to when the typist does not meet the performance requirements -->
+<!-- <RestartOnFailure> causes the lesson to simply restart if the typist does not meet the performance requirements -->
+<lessons>
+
+<!-- GLOBAL SETTINGS -->
+   <globals>
+      <AccuracyError>There were a lot of mistakes on that lesson.  Let's try it again.</AccuracyError>
+      <SpeedError>Typing rate on that lesson wasn't very fast.  Let's practice some more.</SpeedError>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy.</PostLessonMessage>
+      <RestartOnFailure>yes</RestartOnFailure>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <LineLength>50</LineLength>
+      <MinAccuracy>90</MinAccuracy>
+      <ProblemKeysLesson>no</ProblemKeysLesson>
+   </globals>
+   <ProblemKeysLesson>
+      <Name>ProblemKeys</Name>
+      <type>Practice</type>
+      <DisplayFile>ProblemKeys_display</DisplayFile>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <PreLessonMessage>Some keys gave you more trouble that lesson than others.  Let's practice them.</PreLessonMessage>
+   </ProblemKeysLesson>
+
+<!-- START LESSONS -->
+   <lesson>
+      <Name>ModifierKeysIntro</Name>
+      <DisplayFile>ModifierKeysIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+<!-- Left shift -->
+   <!-- Home Row -->
+   <lesson>
+      <Name>LeftShiftHomeNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>HJKL:hjkl;</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>LeftHomeCapsPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>HJKL:hjkl;</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>LeftHomeCapsPracticeWords</Name>
+      <type>Practice</type>
+      <keys>HJKL:asdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>400</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCommonKeysWithHJKLCaps.txt</WordListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+
+   <!-- UIOP -->
+   <lesson>
+      <Name>LeftShiftUIOPNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>UIOPuiop</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>UIOPCapsPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>UIOPuiop</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>UIOPCapsPracticeWords</Name>
+      <type>Practice</type>
+      <keys>UIOP:asdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>400</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCommonKeysWithUIOPCaps.txt</WordListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+
+<!-- Right shift -->
+   <!-- Home Row -->
+   <lesson>
+      <Name>RightShiftASDFGNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>ASDFGasdfg</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>ASDFGCapsPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>ASDFGasdfg</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>ASDFGCapsPracticeWords</Name>
+      <type>Practice</type>
+      <keys>ASDFGasdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>400</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCommonKeysWithASDFGCaps.txt</WordListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+
+   <!-- ERT Keys -->
+   <lesson>
+      <Name>RightShiftERTNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>ERTertdf</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>ERTCapsPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>ERTertdf</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>ERTCapsPracticeWords</Name>
+      <type>Practice</type>
+      <keys>ERTasdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>400</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCommonKeysWithERTCaps.txt</WordListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+
+   <!-- NM Keys -->
+   <lesson>
+      <Name>RightShiftNMNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>60</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>NMnmjk</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>NMCapsPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>NMnmjk</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>150</length>
+   </lesson>
+   <lesson>
+      <Name>NMCapsPracticeWords</Name>
+      <type>Practice</type>
+      <keys>NMasdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>400</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCommonKeysWithNMCaps.txt</WordListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+</lessons>
+

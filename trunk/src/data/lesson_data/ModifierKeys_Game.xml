@@ -1,0 +1,10 @@
+<game>
+   <DisplayFile>game</DisplayFile>
+   <WordListPath>lesson_data/GameWordsModifierKeys.txt</WordListPath>
+   <NumberSprites>6</NumberSprites>
+   <LimitToNumberWords>60</LimitToNumberWords>
+   <PreGameMessage>When you're ready to begin the game, press OK.</PreGameMessage>
+   <PostGameMessage>Your score for that game was %score%.
+      Now that you're finished with learning the Modifier Keys, continue by learning the remaining letter keys.</PostGameMessage>
+</game>
+

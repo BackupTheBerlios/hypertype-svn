@@ -1,0 +1,9 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   Now that you've learned the home row keys, we'll spend some time learning the most common remaining keys.  As you learn these keys, you'll continue to practice the keys you've learned.
+   These keys will be a little bit more difficult to type, since you have to move your fingers off of the home row.  After typing each key, be sure to move your finger back to its home row position.
+      </text>
+   </widget>
+</display>

@@ -1,0 +1,23 @@
+<include>
+   <widget>
+      <name>speed</name>
+      <type>statistic</type>
+      <statistic>AdjustedWPM</statistic>
+      <label>WPM:</label>
+      <top>160</top>
+      <left>5</left>
+      <width>100</width>
+      <height>55</height>
+   </widget>
+   <widget>
+      <name>minspeed</name>
+      <type>statistic</type>
+      <statistic>MinSpeed</statistic>
+      <label>Req. WPM:</label>
+      <top>220</top>
+      <left>5</left>
+      <width>100</width>
+      <height>55</height>
+   </widget>
+</include>
+

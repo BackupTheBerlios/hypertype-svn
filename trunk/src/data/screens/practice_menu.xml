@@ -1,0 +1,60 @@
+<display>
+   <widget>
+      <name>background</name>
+      <type>image</type>
+      <image>images/background.png</image>
+      <top>0</top>
+      <left>0</left>
+   </widget>
+   <widget>
+      <name>title</name>
+      <type>text</type>
+      <top>20</top>
+      <left>200</left>
+      <width>400</width>
+      <height>100</height>
+      <text>Practice Texts</text>
+      <wrap>no</wrap>
+      <fontsize>40</fontsize>
+   </widget>
+   <widget>
+      <name>RansomOfRedChief</name>
+      <type>button</type>
+      <top>100</top>
+      <left>195</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>_Ransom of Red Chief</label>
+      <action>book:lesson_data/Book_RansomOfRedChief.xml</action>
+   </widget>
+   <widget>
+      <name>AfterTwentyYears</name>
+      <type>button</type>
+      <top>175</top>
+      <left>195</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>_After Twenty Years</label>
+      <action>book:lesson_data/Book_AfterTwentyYears.xml</action>
+   </widget>
+   <widget>
+      <name>TheCopAndTheAnthem</name>
+      <type>button</type>
+      <top>250</top>
+      <left>195</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>_The Cop and the Anthem</label>
+      <action>book:lesson_data/Book_TheCopAndTheAnthem.xml</action>
+   </widget>
+   <widget>
+      <name>back</name>
+      <type>button</type>
+      <top>375</top>
+      <left>220</left>
+      <upimage>images/btn_up.png</upimage>
+      <downimage>images/btn_down.png</downimage>
+      <label>_Back</label>
+      <action>screen:main</action>
+   </widget>
+</display>

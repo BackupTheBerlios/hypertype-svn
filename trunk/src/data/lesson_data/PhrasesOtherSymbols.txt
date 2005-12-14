@@ -1,0 +1,26 @@
+if (m_aiMistakesMade[iMistakeKey] >= iMinMistakesToQualify)
+if (asTypedLines[iLine] != "")
+pSettings = m_apLessons[iPos];
+if (iChar >= sLessonText.Length() || sTypedText[iChar] != sLessonText[iChar])
+GetButtonFace() { return m_bMouseOverButton ? m_pDownImage : m_pUpImage; }
+{ return m_bShowDecimals; }
+{ return m_bSpriteBeingDestroyed ? &m_apSpriteDestructionImages : &m_apSpriteImages; }
+IsIterating() { return m_pCurSpriteImage || (m_bEndReached && m_iCurrentTargetDestructionImage < m_apTargetDestructionImages.size()-1); }
+{ return vector<T>::size(); }
+']', '}', '\\', '|', '\'', '"', ',', '<', '.', '>', '/', '?'
+if (iLastFoundChar == 0 || (sLessonText.Length() <= iLineLength))
+if (sLine.Length() < 2 || sLine[1] != '=')
+iScreenOptions |= sdl_fullscreen
+"The \"widget text\" setting was not specified."
+The value for setting \"" + sKey + "\" is not a valid double."
+The path to the file is C:\documents\YearEndStatements.txt.
+<SpriteImages>images/comet1.png| images/comet2.png|images/comet3.png</SpriteImages>
+<SpriteDestructionImages>images/ cometex1.png|images/cometex2.png</SpriteDestructionImages>
+Why are we typing all these symbols?
+Are you tired of typing all these symbols?
+Is this a sentence with a question mark?
+Don't get too discouraged from typing symbols.
+"Well, I'll go better than that," said Jakes to Durrant.
+"The men of Harold stood well together, as their wont was, and formed battle-cries, 'Ut!' 'Olicrosse!' 'Godemite!'"
+"A client of mine," said a lawyer, "was on the point of death when his accordance with the spirit of the dead man's will?"
+"Where are you going to, my pretty maid?"

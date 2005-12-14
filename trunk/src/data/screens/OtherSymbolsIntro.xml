@@ -1,0 +1,7 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   Now that you've learned the top row symbols, it's time to learn the remaining symbol keys.  Don't get discouraged; you're almost done!</text>
+   </widget>
+</display>

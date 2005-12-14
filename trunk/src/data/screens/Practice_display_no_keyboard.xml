@@ -1,0 +1,5 @@
+<display>
+   <include>screens/Practice_widgets.xml</include>
+   <include>screens/Speed_Sidebar.xml</include>
+</display>
+

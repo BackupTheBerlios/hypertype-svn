@@ -1,0 +1,10 @@
+<game>
+   <DisplayFile>game</DisplayFile>
+   <WordListPath>lesson_data/GameWordsRemainingLetters.txt</WordListPath>
+   <NumberSprites>6</NumberSprites>
+   <LimitToNumberWords>60</LimitToNumberWords>
+   <PreGameMessage>When you're ready to begin the game, press OK.</PreGameMessage>
+   <PostGameMessage>Your score for that game was %score%.
+ You've now learned all of the letter keys!  You da man!  After celebrating, continue with the "Advanced Typists" section.</PostGameMessage>
+</game>
+

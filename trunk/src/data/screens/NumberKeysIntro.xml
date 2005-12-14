@@ -1,0 +1,8 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   In this lesson series you'll learn how to type the number keys.
+      </text>
+   </widget>
+</display>

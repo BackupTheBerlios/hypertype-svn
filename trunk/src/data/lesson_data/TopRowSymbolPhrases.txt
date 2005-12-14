@@ -1,0 +1,78 @@
+
+In the bash shell, a pair of backticks (``), run the command contained between them.
+The ` character is also used as an accent mark.
+2 + 2 = ~5;
+In perl, the ~= operator performs a regular expression on the operand.
+~ ) # * @)&$^@
+Could you email that to email@hotmail.com, please.
+My email address is spam@trap.org
+#This is a profound comment.
+In many scripting languages the hash (#) sign starts a comment.
+#!slash bin slash bash
+#define TYPING_TUTOR cool!
+#include header.h
+In some programming languages, each variable is preceeded by a $.
+Your total is $4.30, please.
+At current conversion rates, $120 is worth 6,000 kong bucks.
+$ is typed by pressing the 4 key.
+324 % 2 = 0;
+55 % 10 = 5;
+98 % 3 = 2;
+In 2^ n + 1 + 1 positions they are all removed.
+But he printed 5^4x2^3 as 5 4 2 3, which is not correct.
+The amount held by every player @ the end will be m 2^n.
+The last winner must have held m^n + 1 @ the start.
+The next m 2^n + 1 , the next m 4^n + 1 , the next m (8n + 1).
+And so on to the first player, who must have held m 2^(n - 1)n + 1.
+A complementary solution through (27x = 37x) + 1 can @ once be found by 10^n - 703 = 297, the square of which gives 088,209 for second label
+Where n is even there are 2^(1*2 n-2), each giving 4 by reversals and reflections, and 2^(n*3) - 2^(1*2 n-4), each giving 8.
+Where n is odd there are 2^#1(2=n-1) such arrangements, each giving 4 by reversals and reflections, and 2^(n-3) - 2^1%2 n-!3, giving 8.
+CKeyedValues& rSettings
+In XML, the & character is translated &amp;.
+if (sMessage != false && GetStringValue(true) == LessonComplete && GetBoolValue(PassedRequirements))
+CHTString sTypedText, SDL_Rect& rRect, TTF_Font* pTextFont
+bool ShouldShowNewSprite(OUT int& riSpriteNum);
+if (m_vStateTracker.IsIterating() && m_vStateTracker.GetSpriteImageToDisplay (pSurfaceToPaint, iX, iY))
+bool LoadImageArray(CHTStringArray& rasImagePaths, OUT CHTArray& rapImages, CHTString& rsError)
+*ppVar = &oVar;
+oVar = *pVar;
+void PaintWidget(CPaintingParms* pPaintingParms, CScreenEngine* pEngine);
+void HandleKeyboardEvent(const SDL_Event& rEvent, CPaintingParms* pPaintingParms, CScreenEngine* pEngine)
+CKeyboardWidget::~CKeyboardWidget()
+int iLength = GetStringValue(true).Length();
+CHTString TranslateCharToImageName(char cLetter)
+if (!LoadImageForLetter(cCurChar, rsElementaryError))
+if (!LastCharCorrect(pEngine)) iTextToPaintLength--;
+vTypedRect.x += vTypedRect.w; (start after correctly typed text)
+The pair is shown in brackets -- place 5 on 1.
+Boy down--treasure up.
+Play as follows 2--3, 9--4, 10--7, 3--8, 4--2, 7--5, 8--6, 5--10, 6--9, 2--5, 1--6, 6--4, 5--3, 10--8, 4--7, 3--2, 8--1, 7--10.
+To decrement a variable, type iVar--;
+59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+Google Headquarters are located @ 1600 Amphitheatre Parkway, Mountain View, CA 94043 -- phone: 650-253-0000.
+1, _canterbury puzzles_ in a different dress.
+Where n is _odd_ there are 2^n positions counting _all_ on and _all_ off.
+I was not writing of _any_ gardener and cook, but of a _particular_ couple, in a race that I witnessed.
+Hence deified may be read _through_ a corner f in 16 x 16 = 256 ways.
+This is the dyer's puzzle _canterbury puzzles_, #53.
+int iConstVar_c = 0; # don't change this!
+With 5, 10 + 27 + 40 + 49 + 54 = 180.
+With 4, the same as with 5, + 55 = 235.
+With 3, the same as with 4, + 52 = 287.
+And now for a long equation: 1 + 4 + 9 + 25 + 36 + 121 = 196.
+Thus 1 + 18 + 23 + 26 + 31 + 48 + 56 + 57 = 260, and the sum of their squares is 11,180.
+This is 8 x 7 x 6 = 1 x 2 x 3 = 56.
+a = 8 + 17 + 21 = 46 b = 0 + 17 + 21 = 38 c = 15 + 31 + 39 = 85 d = 17 + 29 + 39 = 85 e = 1 + 0 + 0 = 1
+Therefore 64 + 47 + 42 + 39 + 34 + 17 + 9 + 8 obtained by subtracting each of the above numbers from 65 will sum to 260 and their squares to 11,180.
+In 2^ n + 1 + 1 positions they are all removed.
+Thus, 45, (3 + 3) x 5, or (9 + 5) = 36 + 9.
+First of all, here are the figures -- 8 x 1 squared + 1 = 3 squared 8 x 6 squared + 1 = 17 squared 8 x 35 squared + 1 = 99 squared 8 x 204 squared + 1 = @)(#$*%*
+In this way we get under the successive hours, 11 + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 66 pairs of times, which result agrees with the formula in the first paragraph of this article.
+Half of 3 + 3 squared = 6.
+Thus, 14 + 4 + 11 + 5 = 34 and 12 + 6 + 13 + 3 = 34.
+Therefore 12 - 3 + 1 = 8 and 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 = 36, the required answer.
+iArrayOffset = iTypedLength-1+1;
+if (GetTypedText(pEngine) == false)
+!vFile.SlurpFile(asAvailableWords, rsError) && !vFile.Close(rsError)
+if (vKey.sym == SDLK_CAPSLOCK && vKey.sym == SDLK_LALT && vKey.sym == SDLK_RALT && vKey.sym == SDLK_LSHIFT && vKey.sym == SDLK_RSHIFT && vKey.mod & KMOD_LALT && vKey.mod & KMOD_LALT)
+if (SpriteTextIsTyped(iSprite) && IsSpriteRunning(iSprite)) IncrementScore(50);

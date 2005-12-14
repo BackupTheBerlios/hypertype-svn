@@ -1,0 +1,8 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   Congratulations!  You've learned all of the home row keys.  Now we'll spend some time practicing them.  To pass this section, you'll need to maintain at least 90% accuracy with while typing at a rate of at least 15 words per minute.
+      </text>
+   </widget>
+</display>

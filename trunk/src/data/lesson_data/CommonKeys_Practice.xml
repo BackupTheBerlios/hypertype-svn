@@ -1,0 +1,107 @@
+<!-- All files are relative to screens -->
+<!-- <FailureLesson> is the lesson to go to when the typist does not meet the performance requirements -->
+<!-- <RestartOnFailure> causes the lesson to simply restart if the typist does not meet the performance requirements -->
+<lessons>
+
+<!-- GLOBAL SETTINGS -->
+   <globals>
+      <AccuracyError>There were a lot of mistakes on that lesson.  Let's try it again.</AccuracyError>
+      <SpeedError>Typing rate on that lesson wasn't very fast.  Let's practice some more.</SpeedError>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy.</PostLessonMessage>
+      <RestartOnFailure>yes</RestartOnFailure>
+      <MistakeHandling>Allow Mistakes</MistakeHandling>
+      <LineLength>50</LineLength>
+      <MinAccuracy>90</MinAccuracy>
+      <ProblemKeysLesson>no</ProblemKeysLesson>
+   </globals>
+   <ProblemKeysLesson>
+      <Name>ProblemKeys</Name>
+      <type>Practice</type>
+      <DisplayFile>ProblemKeys_display</DisplayFile>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <PreLessonMessage>Some keys gave you more trouble that lesson than others.  Let's practice them.</PreLessonMessage>
+   </ProblemKeysLesson>
+
+<!-- START LESSONS -->
+   <lesson>
+      <Name>CommonKeysPracticeIntro</Name>
+      <DisplayFile>CommonKeysPracticeIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>CumPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <keys>ertuiopnm,.</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>CumPracticeWords</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/HomeRowPlusCommonKeysWords.txt</WordListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>CumPracticeWords2</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/HomeRowPlusCommonKeysWords.txt</WordListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>CumPracticePhrases</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/PhrasesHomeRowPlusCommonKeys.txt</PhraseListPath>
+      <MinSpeed>12</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>CumPracticePhrases2</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiopnm,.</keys>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/PhrasesHomeRowPlusCommonKeys.txt</PhraseListPath>
+      <MinSpeed>15</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>CommonKeysGameIntro</Name>
+      <DisplayFile>CommonKeysGameIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>PracticeGame</Name>
+      <GameSettingsFile>lesson_data/CommonKeys_Game.xml</GameSettingsFile>
+   </lesson>
+</lessons>
+

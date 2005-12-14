@@ -1,0 +1,8 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   In the following lesson, you'll have a chance to practice the keys you have just learned.  In these lessons, you will be required to correct all your mistakes with the backspace key.  As before, a minimum of 90% accuracy is required to proceed.
+      </text>
+   </widget>
+</display>

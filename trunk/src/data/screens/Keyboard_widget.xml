@@ -1,0 +1,106 @@
+<include>
+   <widget>
+      <name>keyboard</name>
+      <type>keyboard</type>
+      <top>300</top>
+      <left>143</left>
+      <ImageMappings>a=images/keyboard1.png
+a=images/keyboard1.png
+b=images/keyboard2.png
+c=images/keyboard3.png
+d=images/keyboard4.png
+e=images/keyboard5.png
+f=images/keyboard6.png
+g=images/keyboard7.png
+h=images/keyboard8.png
+i=images/keyboard9.png
+j=images/keyboard10.png
+k=images/keyboard11.png
+l=images/keyboard12.png
+m=images/keyboard13.png
+n=images/keyboard14.png
+o=images/keyboard15.png
+p=images/keyboard16.png
+q=images/keyboard17.png
+r=images/keyboard18.png
+s=images/keyboard19.png
+t=images/keyboard20.png
+u=images/keyboard21.png
+v=images/keyboard22.png
+w=images/keyboard23.png
+x=images/keyboard24.png
+y=images/keyboard25.png
+z=images/keyboard26.png
+A=images/keyboard27.png
+B=images/keyboard28.png
+C=images/keyboard29.png
+D=images/keyboard30.png
+E=images/keyboard31.png
+F=images/keyboard32.png
+G=images/keyboard33.png
+H=images/keyboard34.png
+I=images/keyboard35.png
+J=images/keyboard36.png
+K=images/keyboard37.png
+L=images/keyboard38.png
+M=images/keyboard39.png
+N=images/keyboard40.png
+O=images/keyboard41.png
+P=images/keyboard42.png
+Q=images/keyboard43.png
+R=images/keyboard44.png
+S=images/keyboard45.png
+T=images/keyboard46.png
+U=images/keyboard47.png
+V=images/keyboard48.png
+W=images/keyboard49.png
+X=images/keyboard50.png
+Y=images/keyboard51.png
+Z=images/keyboard52.png
+ =images/keyboard53.png
+!=images/keyboard54.png
+"=images/keyboard55.png
+#=images/keyboard56.png
+$=images/keyboard57.png
+%=images/keyboard58.png
+&amp;=images/keyboard59.png
+'=images/keyboard60.png
+(=images/keyboard61.png
+)=images/keyboard62.png
+*=images/keyboard63.png
++=images/keyboard64.png
+,=images/keyboard65.png
+-=images/keyboard66.png
+.=images/keyboard67.png
+0=images/keyboard68.png
+1=images/keyboard69.png
+2=images/keyboard70.png
+3=images/keyboard71.png
+4=images/keyboard72.png
+5=images/keyboard73.png
+6=images/keyboard74.png
+7=images/keyboard75.png
+8=images/keyboard76.png
+9=images/keyboard77.png
+:=images/keyboard78.png
+;=images/keyboard79.png
+&lt;=images/keyboard80.png
+==images/keyboard81.png
+&gt;=images/keyboard82.png
+?=images/keyboard83.png
+@=images/keyboard84.png
+[=images/keyboard85.png
+\=images/keyboard86.png
+]=images/keyboard87.png
+^=images/keyboard88.png
+_=images/keyboard89.png
+`=images/keyboard90.png
+/=images/keyboard91.png
+{=images/keyboard92.png
+|=images/keyboard93.png
+}=images/keyboard94.png
+~=images/keyboard95.png
+bs=images/keyboard96.png
+      </ImageMappings>
+   </widget>
+</include>

@@ -1,0 +1,186 @@
+<!-- All files are relative to screens -->
+<!-- <FailureLesson> is the lesson to go to when the typist does not meet the performance requirements -->
+<!-- <RestartOnFailure> causes the lesson to simply restart if the typist does not meet the performance requirements -->
+<lessons>
+
+<!-- GLOBAL SETTINGS -->
+   <globals>
+      <AccuracyError>There were a lot of mistakes on that lesson.  Let's try it again.</AccuracyError>
+      <SpeedError>Typing rate on that lesson wasn't very fast.  Let's practice some more.</SpeedError>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy.</PostLessonMessage>
+      <RestartOnFailure>yes</RestartOnFailure>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <LineLength>50</LineLength>
+      <MinAccuracy>90</MinAccuracy>
+      <ProblemKeysLesson>no</ProblemKeysLesson>
+   </globals>
+   <ProblemKeysLesson>
+      <Name>ProblemKeys</Name>
+      <type>Practice</type>
+      <DisplayFile>ProblemKeys_display</DisplayFile>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <PreLessonMessage>Some keys gave you more trouble that lesson than others.  Let's practice them.</PreLessonMessage>
+   </ProblemKeysLesson>
+
+<!-- START LESSONS -->
+   <lesson>
+      <Name>HomeRowIntro</Name>
+      <DisplayFile>HomeRowIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+   <!-- Left hand - home -->
+   <lesson>
+      <Name>LeftHandNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>50</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>asdf </keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>PracticeLessonsIntro</Name>
+      <DisplayFile>PracticeLessonsIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>LeftHandPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>asdf</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>LeftHandPracticeRandom</Name>
+      <type>Practice</type>
+      <keys>asdf</keys>
+      <DisplayFile>Practice_display</DisplayFile>
+      <length>500</length>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <!-- Right hand - home -->
+   <lesson>
+      <Name>RightHandNew</Name>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <type>NewKeys</type>
+      <keys>jkl;</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>50</length>
+   </lesson>
+   <lesson>
+      <Name>RightHandPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>jkl;</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>RightHandPracticeRandom</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>jkl;</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <FailureLesson>RightHandPracticeRepetition</FailureLesson>
+   </lesson>
+   <!-- g and h keys -->
+   <lesson>
+      <Name>GHKeys</Name>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <type>NewKeys</type>
+      <keys>gh</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>20</length>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+   </lesson>
+   <lesson>
+      <Name>GHPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <Keys>fghj</Keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>50</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+   </lesson>
+
+   <!-- Home Row practice -->
+   <lesson>
+      <Name>HomeRowPracticeIntro</Name>
+      <DisplayFile>HomeRowPracticeIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>HomeRowKeysNew</Name>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <type>NewKeys</type>
+      <keys>asdfghjkl;</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>70</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+   </lesson>
+   <lesson>
+      <Name>HomeRowPracticeRepetition</Name>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <Type>Practice</Type>
+      <keys>asdfghjkl;</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>500</length>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>HomeRowPracticeRandom</Name>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <Type>Practice</Type>
+      <keys>asdfghjkl;</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>600</length>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>HomeRowPracticeWords</Name>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <Type>Practice</Type>
+      <keys>asdfghjkl;</keys>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/HomeRowWords.txt</WordListPath>
+      <length>600</length>
+      <MinSpeed>10</MinSpeed>
+      <FailureLesson>HomeRowPracticeRepetition</FailureLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>HomeRowPracticeWords2</Name>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <Type>Practice</Type>
+      <keys>asdfghjkl;</keys>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/HomeRowWords.txt</WordListPath>
+      <length>600</length>
+      <MinSpeed>10</MinSpeed>
+      <FailureLesson>HomeRowPracticeWords</FailureLesson>
+      <PostLessonMessage>Congratulations!  You have now learned the home row keys.  Before going on to learn the other common keys, click the "Practice" button to practice what you've learned.</PostLessonMessage>
+   </lesson>
+</lessons>

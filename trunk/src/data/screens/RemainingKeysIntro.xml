@@ -1,0 +1,8 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   You've now learned the home row keys as well as the more common non-home-row keys.  In this lesson series, you'll learn the remaining keys.
+      </text>
+   </widget>
+</display>

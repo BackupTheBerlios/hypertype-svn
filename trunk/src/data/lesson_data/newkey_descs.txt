@@ -1,0 +1,103 @@
+ =The spacebar is pressed with the right thumb.
+a=The 'a' key is typed with the little finger of the left hand.
+b=The 'b' key is typed with the index finger of the left hand.
+c=The 'c' key is typed with the middle finger of the left hand.
+d=The 'd' key is typed with the middle finger of the left hand.
+e=The 'e' key is typed with the middle finger of the left hand.
+f=The 'f' key is typed with the index finger of the left hand.
+g=The 'g' key is typed with the index finger of the left hand.
+h=The 'h' key is typed with the index finger of the right hand.
+i=The 'i' key is typed with the middle finger of the right hand.
+j=The 'j' key is typed with the index finger of the right hand.
+k=The 'k' key is typed with the middle finger of the right hand.
+l=The 'l' key is typed with the ring finger of the right hand.
+m=The 'm' key is typed with the index finger of the right hand.
+n=The 'n' key is typed with the index finger of the right hand.
+o=The 'o' key is typed with the ring finger of the right hand.
+p=The 'p' key is typed with the little finger of the right hand.
+q=The 'q' key is typed with the little finger of the left hand.
+r=The 'r' key is typed with the index finger of the left hand.
+s=The 's' key is typed with the ring finger of the left hand.
+t=The 't' key is typed with the index finger of the left hand.
+u=The 'u' key is typed with the index finger of the right hand.
+v=The 'v' key is typed with the index finger of the left hand.
+w=The 'w' key is typed with the ring finger of the left hand.
+x=The 'x' key is typed with the ring finger of the left hand.
+y=The 'y' key is typed with the index finger of the right hand.
+z=The 'z' key is typed with the little finger of the left hand.
+
+A=Press the 'a' key with the left little finger while holding down the right shift key with the little finger.
+B=Press the 'b' key with the left index finger while holding down the right shift key with the little finger.
+C=Press the 'c' key with the left middle finger while holding down the right shift key with the little finger.
+D=Press the 'd' key with the left middle finger while holding down the right shift key with the little finger.
+E=Press the 'e' key with the left middle finger while holding down the right shift key with the little finger.
+F=Press the 'f' key with the left index finger while holding down the right shift key with the little finger.
+G=Press the 'g' key with the left index finger while holding down the right shift key with the little finger.
+H=Press the 'h' key with the right index finger while holding down the left shift key with the little finger.
+I=Press the 'i' key with the right middle finger while holding down the left shift key with the little finger.
+J=Press the 'j' key with the right index finger while holding down the left shift key with the little finger.
+K=Press the 'k' key with the right middle finger while holding down the left shift key with the little finger.
+L=Press the 'l' key with the right ring finger while holding down the left shift key with the little finger.
+M=Press the 'm' key with the right ring finger while holding down the left shift key with the little finger.
+N=Press the 'n' key with the right ring finger while holding down the left shift key with the little finger.
+O=Press the 'o' key with the right ring finger while holding down the left shift key with the little finger.
+P=Press the 'p' key with the right little finger while holding down the left shift key with the little finger.
+Q=Press the 'q' key with the left little finger while holding down the right shift key with the little finger.
+R=Press the 'r' key with the left index finger while holding down the right shift key with the little finger.
+S=Press the 's' key with the left ring finger while holding down the right shift key with the little finger.
+T=Press the 't' key with the left index finger while holding down the right shift key with the little finger.
+U=Press the 'u' key with the right index finger while holding down the left shift key with the little finger.
+W=Press the 'w' key with the left ring finger while holding down the right shift key with the little finger.
+X=Press the 'x' key with the left ring finger while holding down the right shift key with the little finger.
+Y=Press the 'y' key with the right index finger while holding down the left shift key with the little finger.
+Z=Press the 'z' key with the left little finger while holding down the right shift key with the little finger.
+
+1=The '1' key is typed with the little finger of the left hand.
+2=The '2' key is typed with the ring finger of the left hand.
+3=The '3' key is typed with the middle finger of the left hand.
+4=The '4' key is typed with the index finger of the left hand.
+5=The '5' key is typed with the index finger of the left hand.
+6=The '6' key is typed with the index finger of the right or left hand.
+7=The '7' key is typed with the index finger of the right hand.
+8=The '8' key is typed with the middle finger of the right hand.
+9=The '9' key is typed with the ring finger of the right hand.
+0=The '0' key is typed with the little finger of the right hand.
+
+;=The ';' key is typed with the little finger of the right hand.
+,=The comma key is typed with the middle finger of the right hand.
+.=The period key is typed with the ring finger of the right hand.
+:=Press the ';' key with the little finger while holding down the left shift key with the little finger.
+`=The '`' key is typed with the little finger of the left hand.
+-=The '-' key is typed with the little finger of the right hand.
+==The '=' key is typed with the little finger of the right hand.
+
+_=Press the '-' key with the little finger while holding down the left shift key with the little finger.
++=Press the '+' key with the little finger while holding down the left shift key with the little finger.
+~=Press the '`' key with the left little finger while holding down the right shift key with the little finger.
+!=Press the '1' key with the left little finger while holding down the right shift key with the little finger.
+@=Press the '2' key with the left ring finger while holding down the right shift key with the little finger.
+#=Press the '3' key with the left middle finger while holding down the right shift key with the little finger.
+$=Press the '4' key with the left index finger while holding down the right shift key with the little finger.
+%=Press the '5' key with the left index finger while holding down the right shift key with the little finger.
+^=Press the '6' key with the left or right index finger while holding down the shift key with the little finger.
+&=Press the '7' key with the right index finger while holding down the left shift key with the little finger.
+*=Press the '8' key with the right middle finger while holding down the left shift key with the little finger.
+(=Press the '9' key with the right ring finger while holding down the left shift key with the little finger.
+)=Press the '0' key with the right little finger while holding down the left shift key with the little finger.
+
+[=The '[' key is typed with the little finger of the right hand.
+]=The ']' key is typed with the little finger of the right hand.
+\=The '\' key is typed with the little finger of the right hand.
+'=The ''' key is typed with the little finger of the right hand.
+/=The '/' key is typed with the little finger of the right hand.
+{=Press the '[' key with the right little finger while holding down the left shift key with the little finger.
+}=Press the ']' key with the right little finger while holding down the left shift key with the little finger.
+|=Press the '\' key with the right little finger while holding down the left shift key with the little finger.
+"=Press the ''' key with the right little finger while holding down the left shift key with the little finger.
+<=Press the ',' key with the right little finger while holding down the left shift key with the little finger.
+>=Press the '.' key with the right little finger while holding down the left shift key with the little finger.
+?=Press the '/' key with the right little finger while holding down the left shift key with the little finger.
+
+
+
+

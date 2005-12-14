@@ -1,0 +1,8 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   In this lesson series, you'll learn how to use the shift and enter keys.  To type capital letters, press the letter key while holding down the shift button with the opposite hand.
+      </text>
+   </widget>
+</display>

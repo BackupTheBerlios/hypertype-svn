@@ -1,0 +1,73 @@
+<!-- All files are relative to screens -->
+<!-- <FailureLesson> is the lesson to go to when the typist does not meet the performance requirements -->
+<!-- <RestartOnFailure> causes the lesson to simply restart if the typist does not meet the performance requirements -->
+<lessons>
+
+<!-- GLOBAL SETTINGS -->
+   <globals>
+      <AccuracyError>There were a lot of mistakes on that lesson.  Let's try it again.</AccuracyError>
+      <SpeedError>Typing rate on that lesson wasn't very fast.  Let's practice some more.</SpeedError>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy.</PostLessonMessage>
+      <RestartOnFailure>yes</RestartOnFailure>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <LineLength>50</LineLength>
+      <MinAccuracy>90</MinAccuracy>
+      <ProblemKeysLesson>no</ProblemKeysLesson>
+   </globals>
+   <ProblemKeysLesson>
+      <Name>ProblemKeys</Name>
+      <type>Practice</type>
+      <DisplayFile>ProblemKeys_display</DisplayFile>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <PreLessonMessage>Some keys gave you more trouble that lesson than others.  Let's practice them.</PreLessonMessage>
+   </ProblemKeysLesson>
+
+   <lesson>
+      <Name>HomeRowPracticeRandom</Name>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <Type>Practice</Type>
+      <keys>asdfghjkl;</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>600</length>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>HomeRowPracticeWords</Name>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <Type>Practice</Type>
+      <keys>asdfghjkl;</keys>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/HomeRowWords.txt</WordListPath>
+      <length>600</length>
+      <MinSpeed>10</MinSpeed>
+      <FailureLesson>HomeRowPracticeRepetition</FailureLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>HomeRowPracticeWords2</Name>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <Type>Practice</Type>
+      <keys>asdfghjkl;</keys>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/HomeRowWords.txt</WordListPath>
+      <length>600</length>
+      <MinSpeed>10</MinSpeed>
+      <FailureLesson>HomeRowPracticeRepetition</FailureLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>HomeRowPracticeWords3</Name>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <Type>Practice</Type>
+      <keys>asdfghjkl;</keys>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/HomeRowWords.txt</WordListPath>
+      <length>600</length>
+      <MinSpeed>10</MinSpeed>
+      <FailureLesson>HomeRowPracticeRepetition</FailureLesson>
+      <PostLessonMessage>Now that you've practiced the home row keys some, it's time to learn the some other common keys.  Click on the "Common Keys" button in the lesson menu to start.</PostLessonMessage>
+   </lesson>
+</lessons>
