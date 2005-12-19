@@ -147,7 +147,8 @@ protected:
    int m_iSpriteNumber;
    CCollidingSpriteStateTracker m_vStateTracker;
    TTF_Font* m_pTextFont;
-
+   
+   CHTString m_sLastPaintedText;
    SDL_Rect m_vLastPaintedSpriteRect;
    SDL_Rect m_vLastPaintedTargetRect;
    SDL_Rect m_vLastPaintedTextRect;
@@ -291,6 +292,7 @@ void CCollidingSprite::PaintWidget(CPaintingParms* pPaintingParms, CScreenEngine
       m_vLastPaintedTextRect = m_vLastPaintedSpriteRect;
       PaintTextLine(GetTextToType(pEngine), GetTypedText(pEngine), m_vLastPaintedTextRect, m_pTextFont, SDLColorFromRGB(255,255,0), SDLColorFromRGB(0,0,0),
                     SDLColorFromRGB(255,0,0), pPaintingParms, pEngine);
+      m_sLastPaintedText = GetTypedText(pEngine);
 
       SetSpriteTextVisible(pEngine, m_vLastPaintedTextRect.y >= -4);
    }
@@ -300,6 +302,9 @@ void CCollidingSprite::PaintWidget(CPaintingParms* pPaintingParms, CScreenEngine
 
 void CCollidingSprite::HandleKeyboardEvent(const SDL_Event& rEvent, CPaintingParms* pPaintingParms, CScreenEngine* pEngine)
 {
+   if (m_sLastPaintedText.CompareWithCase(GetTypedText(pEngine)) == 0)
+      return;
+   
    if (!HasTextToType(pEngine))
       m_vStateTracker.RegisterExternalHit();
 
