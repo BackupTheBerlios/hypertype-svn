@@ -21,12 +21,14 @@
 #include "precompiled.h"
 
 #include <getopt.h>
+#include <sys/file.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 
 #include "config.h"
 #include "globals.h"
 #include "screen.h"
+#include "widget_settings.h"
 #include "file_aid.h"
 
 char* aszDataPaths[] = {
@@ -98,6 +100,12 @@ void HandleProgramArguments(int argc, char* const argv[])
          break;
       }
    }
+}
+
+bool EstablishInstanceLock()
+{
+   int g_fdInstanceLock = open(GetSettingsFile(), O_RDONLY);
+   return (flock(g_fdInstanceLock, LOCK_EX|LOCK_NB) != -1);
 }
 
 void MungerDataFilePath(CHTString& rsPath)

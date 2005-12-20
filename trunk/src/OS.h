@@ -22,6 +22,8 @@
 
 void HandleProgramArguments(int argc, char* const argv[]);
 
+bool EstablishInstanceLock();
+
 CHTString GetProgramFolder();
 
 CHTString GetHomeFolder();

@@ -42,6 +42,12 @@ int main(int argc, char *argv[])
 
    TestCHTString();
 
+   if (!EstablishInstanceLock())
+   {
+      cout << "Found existing instance running.  Exiting.\n";
+      return 0;
+   }
+
    srand(time(NULL));
 
    /* Initialize video and TTF font support */

@@ -163,11 +163,6 @@ CHTString GetLessonHistoryPath()
    return GetSettingsDir() + "/lesson_history.xml";
 }
 
-CHTString GetSettingsFile()
-{
-   return GetSettingsDir()+"/lessons.conf";
-}
-
 ELessonType TextToLessonType(CHTString sText)
 {
    if (IsSameNoCase(sText, "none"))

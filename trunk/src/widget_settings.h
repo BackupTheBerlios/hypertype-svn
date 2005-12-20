@@ -69,5 +69,6 @@ protected:
 };
 
 CHTString GetSettingsDir();
+CHTString GetSettingsFile();
 
 #endif
