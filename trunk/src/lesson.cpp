@@ -141,12 +141,15 @@ protected:
    virtual bool Iterator_OnScreenEnd(CScreenEngine* pScreen);
 
 protected:
-   bool GetCompletedLessons(OUT int& riNumLines);
-   bool SetCompletedLessons(int iNumLines, CHTString& rsError);
+   bool GetCompletedLessons(OUT int& riNumLessons);
+   bool SetCompletedLessons(int iNumLessons, CHTString& rsError);
+
+   double GetMinSpeed(double dDefaultMinSpeed);
+   bool SetMinSpeed(double dMinSpeed, CHTString& rsError);
 
    int m_iLessonLength;
-   int m_iMinSpeedRequirement;
-   int m_iMaxSpeedRequirement;
+   double m_dMinSpeedRequirement;
+   double m_dSpeedIncreaseAmount;
    CHTString m_sBookCompletedMessage;
    CKeyedValues m_LessonSettings;
    CHTStringArray m_asLessonTexts;
@@ -1192,8 +1195,8 @@ bool TextToMistakeHandling(CHTString sText, EMistakeHandling& reHandling)
 CBookTextIterator::CBookTextIterator()
 {
    m_iLessonLength = 0;
-   m_iMinSpeedRequirement = 0;
-   m_iMaxSpeedRequirement = 0;
+   m_dMinSpeedRequirement = 0;
+   m_dSpeedIncreaseAmount = 0;
 }
 
 CBookTextIterator::~CBookTextIterator()
@@ -1264,19 +1267,19 @@ bool CBookTextIterator::Iterator_Init(CHTString sSettingsFile, CHTString& rsErro
       {
          m_LessonSettings.LoadFromXml(pLessonElem->children);
       }
-      else if (IsSameNoCase((char*)pLessonElem->name, "MinSpeedRequirement"))
+      else if (IsSameNoCase((char*)pLessonElem->name, "SpeedIncreaseAmount"))
       {
-         if (!StringToInt((char*)pLessonElem->children->content, m_iMinSpeedRequirement))
+         if (!StringToDouble((char*)pLessonElem->children->content, m_dSpeedIncreaseAmount))
          {
-            rsError = "The 'MinSpeedRequirement' setting must be a number.";
+            rsError = "The 'SpeedIncreaseAmount' setting must be a number.";
             return false;
          }
       }
-      else if (IsSameNoCase((char*)pLessonElem->name, "MaxSpeedRequirement"))
+      else if (IsSameNoCase((char*)pLessonElem->name, "MinSpeedRequirement"))
       {
-         if (!StringToInt((char*)pLessonElem->children->content, m_iMaxSpeedRequirement))
+         if (!StringToDouble((char*)pLessonElem->children->content, m_dMinSpeedRequirement))
          {
-            rsError = "The 'MaxSpeedRequirement' setting must be a number.";
+            rsError = "The 'MinSpeedRequirement' setting must be a number.";
             return false;
          }
       }
@@ -1334,9 +1337,7 @@ CScreenEngine* CBookTextIterator::Iterator_GetNextScreen(CScreenEngine* pPrevScr
    // Load new screen
    CLessonEngine* pNewScreen = new CLessonEngine;
    m_LessonSettings.SetStringValue("LessonText", m_asLessonTexts[iStartingLesson]);
-   int iTotalLessons = m_asLessonTexts.size();
-   double dProgress = double(iStartingLesson) / double(iTotalLessons-1);
-   double dMinSpeed = m_iMinSpeedRequirement + (double(m_iMaxSpeedRequirement-m_iMinSpeedRequirement)*dProgress);
+   double dMinSpeed = GetMinSpeed(m_dMinSpeedRequirement);
    m_LessonSettings.SetDoubleValue("MinSpeed", dMinSpeed);
 
    if (!pNewScreen->Load(&m_LessonSettings, rsError))
@@ -1347,6 +1348,7 @@ CScreenEngine* CBookTextIterator::Iterator_GetNextScreen(CScreenEngine* pPrevScr
    pNewScreen->SetIntValue("LessonNumber", iStartingLesson);
 
    // Set vars for lesson progress indicator
+   int iTotalLessons = m_asLessonTexts.size();
    int iShownLessons = min(iTotalLessons, 20);
    double dRatio = double(iTotalLessons) / double(iShownLessons);
    pNewScreen->SetIntValue("NumberLessons", iShownLessons);
@@ -1369,7 +1371,8 @@ bool CBookTextIterator::Iterator_OnScreenEnd(CScreenEngine* pScreen)
          iCompletedLesson++;
 
          CHTString sError;
-         if (!SetCompletedLessons(iCompletedLesson, sError))
+         if (!SetCompletedLessons(iCompletedLesson, sError) ||
+             !SetMinSpeed(pScreen->GetDoubleValue("MinSpeed")+m_dSpeedIncreaseAmount, sError))
          {
             cout << sError;
             return false;
@@ -1380,24 +1383,32 @@ bool CBookTextIterator::Iterator_OnScreenEnd(CScreenEngine* pScreen)
    return true;
 }
 
-bool CBookTextIterator::GetCompletedLessons(OUT int& riNumLines)
+bool CBookTextIterator::GetCompletedLessons(OUT int& riNumLessons)
 {
-   int iLineSetting;
    CHTString sLineSetting;
-   if (GetSettingFromSettingsFile(ExtractFileNameFromPath(m_sSettingsFile)+"_CompletedLessons", sLineSetting) && StringToInt(sLineSetting, iLineSetting))
-   {
-      riNumLines = iLineSetting;
-      return true;
-   }
-
-   return false;
+   return GetSettingFromSettingsFile(ExtractFileNameFromPath(m_sSettingsFile)+"_CompletedLessons", sLineSetting) &&
+           StringToInt(sLineSetting, riNumLessons);
 }
 
-bool CBookTextIterator::SetCompletedLessons(int iNumLines, CHTString& rsError)
+bool CBookTextIterator::SetCompletedLessons(int iNumLessons, CHTString& rsError)
 {
-   return SaveSettingToSettingsFile(ExtractFileNameFromPath(m_sSettingsFile)+"_CompletedLessons", IntToHTString(iNumLines), rsError);
+   return SaveSettingToSettingsFile(ExtractFileNameFromPath(m_sSettingsFile)+"_CompletedLessons", IntToHTString(iNumLessons), rsError);
 }
 
+double CBookTextIterator::GetMinSpeed(double dDefaultMinSpeed)
+{
+   CHTString sSpeedSetting;
+   double dMinSpeed;
+   if (GetSettingFromSettingsFile("MinBookSpeed", sSpeedSetting) && StringToDouble(sSpeedSetting, dMinSpeed))
+      return dMinSpeed;
+
+   return dDefaultMinSpeed;
+}
+
+bool CBookTextIterator::SetMinSpeed(double dMinSpeed, CHTString& rsError)
+{
+   return SaveSettingToSettingsFile("MinBookSpeed", DoubleToString(dMinSpeed), rsError);
+}
 
 
 ////////////////////////////// Interfaced functions //////////////////////////////////////////
