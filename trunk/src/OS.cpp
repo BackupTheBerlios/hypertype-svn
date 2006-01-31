@@ -28,7 +28,7 @@
 #include "config.h"
 #include "globals.h"
 #include "screen.h"
-#include "widget_settings.h"
+#include "widget_settings_file.h"
 #include "file_aid.h"
 
 char* aszDataPaths[] = {

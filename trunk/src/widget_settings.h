@@ -68,7 +68,5 @@ protected:
    CHTArray<CHTString> m_asValues;
 };
 
-CHTString GetSettingsDir();
-CHTString GetSettingsFile();
 
 #endif

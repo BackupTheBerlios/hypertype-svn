@@ -78,3 +78,8 @@ CHTString GetSettingsDir()
 {
    return GetHomeFolder() + "/.hypertype";
 }
+
+CHTString GetSettingsFile()
+{
+   return GetSettingsDir()+"/lessons.conf";
+}

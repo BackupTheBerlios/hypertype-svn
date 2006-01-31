@@ -27,3 +27,7 @@ public:
    bool SaveToConfFile(CHTString sFile, CHTString& rsError);
 };
 
+
+CHTString GetSettingsDir();
+CHTString GetSettingsFile();
+

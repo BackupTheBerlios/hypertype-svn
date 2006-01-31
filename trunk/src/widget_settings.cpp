@@ -188,7 +188,3 @@ void CKeyedValues::SetDoubleValue(CHTString sKey, double dNum)
    SetStringValue(sKey, sValue);
 }
 
-CHTString GetSettingsFile()
-{
-   return GetSettingsDir()+"/lessons.conf";
-}
