@@ -94,8 +94,8 @@ $=Press the '4' key with the left index finger while holding down the right shif
 }=Press the ']' key with the right little finger while holding down the left shift key with the little finger.
 |=Press the '\' key with the right little finger while holding down the left shift key with the little finger.
 "=Press the ''' key with the right little finger while holding down the left shift key with the little finger.
-<=Press the ',' key with the right little finger while holding down the left shift key with the little finger.
->=Press the '.' key with the right little finger while holding down the left shift key with the little finger.
+<=Press the ',' key with the right middle finger while holding down the left shift key with the little finger.
+>=Press the '.' key with the right ring finger while holding down the left shift key with the little finger.
 ?=Press the '/' key with the right little finger while holding down the left shift key with the little finger.
 
 
