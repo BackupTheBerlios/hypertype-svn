@@ -3,7 +3,7 @@
 # Thanks to Matthias Saou for his explanations on http://freshrpms.net/docs/fight.html
 
 Name: hypertype
-Version: 0.1
+Version: 0.2
 Release: 1
 Vendor: None
 Copyright: GPL
