@@ -353,6 +353,7 @@ bool CLessonEngine::Load(CKeyedValues* pSettings, CHTString& rsError)
          if (!pSettings->GetStringValue("SpeedError", sSpeedError, rsError))
             return false;
 
+         SetDoubleValue("OrigMinSpeed", dMinSpeed);
          CHTString sMinSpeedAdjustRatio;
          if (GetSettingFromSettingsFile("SpeedAdjustmentRatio", sMinSpeedAdjustRatio))
          {
@@ -1372,7 +1373,7 @@ bool CBookTextIterator::Iterator_OnScreenEnd(CScreenEngine* pScreen)
 
          CHTString sError;
          if (!SetCompletedLessons(iCompletedLesson, sError) ||
-             !SetMinSpeed(pScreen->GetDoubleValue("MinSpeed")+m_dSpeedIncreaseAmount, sError))
+             !SetMinSpeed(pScreen->GetDoubleValue("OrigMinSpeed")+m_dSpeedIncreaseAmount, sError))
          {
             cout << sError;
             return false;
