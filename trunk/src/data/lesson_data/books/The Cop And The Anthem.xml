@@ -1,5 +1,5 @@
 <settings>
-   <BookTextPath>lesson_data/BookRansomOfRedChief.txt</BookTextPath>
+   <BookTextPath>lesson_data/The Cop And The Anthem.txt</BookTextPath>
    <LessonLength>600</LessonLength>
    <BookCompletedMessage>You've just finished typing this story.  Take a break, then start on one of the other books in the menu.</BookCompletedMessage>
    <SpeedIncreaseAmount>0.1</SpeedIncreaseAmount>
