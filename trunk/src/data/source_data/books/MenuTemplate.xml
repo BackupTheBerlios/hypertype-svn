@@ -1,0 +1,42 @@
+<display>
+   <widget>
+      <name>background</name>
+      <type>image</type>
+      <image>images/background.png</image>
+      <top>0</top>
+      <left>0</left>
+   </widget>
+   <widget>
+      <name>title</name>
+      <type>text</type>
+      <top>20</top>
+      <left>200</left>
+      <width>400</width>
+      <height>100</height>
+      <text>Practice Texts</text>
+      <wrap>no</wrap>
+      <fontsize>40</fontsize>
+   </widget>
+   <!--StartRepeat:books-->
+   <widget>
+      <name>^BookName$</name>
+      <type>button</type>
+      <top>^top$</top>
+      <left>^left$</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>^BookTitle$</label>
+      <action>book:lesson_data/books/^BookName$</action>
+   </widget>
+   <!--EndRepeat:books-->
+   <widget>
+      <name>back</name>
+      <type>button</type>
+      <top>375</top>
+      <left>220</left>
+      <upimage>images/btn_up.png</upimage>
+      <downimage>images/btn_down.png</downimage>
+      <label>_Back</label>
+      <action>screen:main</action>
+   </widget>
+</display>
