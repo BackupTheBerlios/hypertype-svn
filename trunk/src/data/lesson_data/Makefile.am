@@ -1,9 +1,7 @@
 INCLUDES = $(all_includes)
 METASOURCES = AUTO
 lesson_datadir = $(pkgdatadir)/lesson_data
-lesson_data_DATA = AllNumberPhrases.txt BookAfterTwentyYears.txt \
-	Book_AfterTwentyYears.xml Book_RansomOfRedChief.xml Book_TheCopAndTheAnthem.xml \
-	BookRansomOfRedChief.txt BookTheCopAndTheAnthem.txt clear_lessons.xml CommonKeys_Game.xml \
+lesson_data_DATA = AllNumberPhrases.txt clear_lessons.xml CommonKeys_Game.xml \
 	CommonKeys_Lessons.xml CommonKeys_Practice.xml GameWordsCommonKeys.txt \
 	GameWordsModifierKeys.txt GameWordsNumberKeys.txt GameWordsRemainingLetters.txt \
 	GameWordsTopRowSymbols.txt HomePlusERTUIOPWords.txt HomePlusERTWords.txt HomeRow_Lessons.xml \
@@ -21,3 +19,4 @@ lesson_data_DATA = AllNumberPhrases.txt BookAfterTwentyYears.txt \
 	GameWordsOtherSymbols.txt
 
 EXTRA_DIST = $(lesson_data_DATA)
+SUBDIRS = books
