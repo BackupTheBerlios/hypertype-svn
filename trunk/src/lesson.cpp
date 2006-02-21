@@ -67,7 +67,7 @@ protected:
    void RegisterCorrectKey(CHTString sCorrectKey);
    void RegisterIncorrectKey(CHTString sCorrectKey);
    void GenerateProblemKeys();
-   void MungerLessonMessage(CHTString& rsMessage);
+   CHTString MungerLessonMessage(CHTString sMessage);
 
    // Includes lesson and typed text and performance stats
    void UpdateLessonStats();
@@ -429,8 +429,7 @@ void CLessonEngine::OnScreenStart(SDL_Surface* pScreen, bool& rbScreenNeedsRepai
 {
    rbScreenNeedsRepaint = false;
 
-   CHTString sMessage = GetStringValue("PreLessonMessage", false);
-   MungerLessonMessage(sMessage);
+   CHTString sMessage = MungerLessonMessage(GetStringValue("PreLessonMessage", false));
    if (sMessage != "")
    {
       MessageBox(sMessage, pScreen, EMessageBoxType_OK);
@@ -451,8 +450,7 @@ void CLessonEngine::OnScreenEnd(SDL_Surface* pScreen)
 
    GenerateProblemKeys();
 
-   CHTString sMessage = GetStringValue("PostLessonMessage", false);
-   MungerLessonMessage(sMessage);
+   CHTString sMessage = MungerLessonMessage(GetStringValue("PostLessonMessage", false));
    if (sMessage != "" && GetStringValue("Action") == "LessonComplete" && GetBoolValue("PassedRequirements"))
       MessageBox(sMessage, pScreen, EMessageBoxType_OK);
 }
@@ -720,10 +718,11 @@ void CLessonEngine::GenerateProblemKeys()
       SetStringValue("ProblemKeys", sProblemKeys);
 }
 
-void CLessonEngine::MungerLessonMessage(CHTString& rsMessage)
+CHTString CLessonEngine::MungerLessonMessage(CHTString sMessage)
 {
-   rsMessage.Replace("%accuracy%", DoubleToString(GetDoubleValue("Accuracy")));
-   rsMessage.Replace("%speed%", DoubleToString(GetDoubleValue("AdjustedWPM")));
+   sMessage.Replace("%accuracy%", DoubleToString(GetDoubleValue("Accuracy")));
+   sMessage.Replace("%speed%", DoubleToString(GetDoubleValue("AdjustedWPM")));
+   return sMessage;
 }
 
 void CLessonEngine::UpdateLessonStats()
@@ -805,7 +804,7 @@ void CLessonEngine::UpdateLessonStats()
       if (GetDoubleValue("AdjustedWPM") < dMinSpeed)
       {
          SetBoolValue("PassedRequirements", false);
-         SetStringValue("RequirementsError", GetStringValue("SpeedError"));
+         SetStringValue("RequirementsError", MungerLessonMessage(GetStringValue("SpeedError")));
       }
    }
 
@@ -815,7 +814,7 @@ void CLessonEngine::UpdateLessonStats()
       if ((int)GetDoubleValue("Accuracy") < iMinAccuracy)
       {
          SetBoolValue("PassedRequirements", false);
-         SetStringValue("RequirementsError", GetStringValue("AccuracyError"));
+         SetStringValue("RequirementsError", MungerLessonMessage(GetStringValue("AccuracyError")));
       }
    }
    m_iLastLessonUpdate = SDL_GetTicks();
