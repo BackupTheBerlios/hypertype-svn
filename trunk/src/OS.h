@@ -35,4 +35,5 @@ bool IsAbsolutePath(CHTString sPath);
 void MungerDataFilePath(CHTString& rsPath);
 
 CHTString ExtractFileNameFromPath(CHTString sPath);
+CHTString ExtractTitleFromPath(CHTString sPath);
 CHTString ExtractDirectoryFromPath(CHTString sPath);

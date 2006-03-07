@@ -34,6 +34,11 @@ bool CHTString::StartsWithNoCase(CHTString sOther) const
    return strncasecmp(GetString(), sOther.GetString(), sOther.Length()) == 0;
 }
 
+bool CHTString::EndsWithNoCase(CHTString sOther) const
+{
+   return strncasecmp(Right(sOther.Length()).GetString(), sOther.GetString(), sOther.Length()) == 0;
+}
+
 CHTString CHTString::Left(int iChars) const
 {
    if (*this == "") return "";
@@ -44,7 +49,7 @@ CHTString CHTString::Left(int iChars) const
    return sLeftCopy;
 }
 
-CHTString CHTString::Mid(int iStartChar, int iNumChars)
+CHTString CHTString::Mid(int iStartChar, int iNumChars) const
 {
    CHTString sReturnString = Right(Length()-iStartChar);
    if (iNumChars != -1 && sReturnString.Length() > iNumChars)
@@ -53,7 +58,7 @@ CHTString CHTString::Mid(int iStartChar, int iNumChars)
    return sReturnString;
 }
 
-CHTString CHTString::Right(int iNumChars)
+CHTString CHTString::Right(int iNumChars) const
 {
    CHTString vString;
    vString.m_sData.append(m_sData, Length()-iNumChars, iNumChars);
@@ -102,15 +107,23 @@ bool CHTString::RemovePrefixNoCase(CHTString sPrefix)
    if (Length() < sPrefix.Length())
       return false;
 
-   CHTString sTmpString = *this;
-   sTmpString.UpCase();
-   sPrefix.UpCase();
-   if (strncmp(sPrefix, sTmpString, sPrefix.Length())==0)
+   if (StartsWithNoCase(sPrefix))
    {
-      if (sPrefix.Length() == sTmpString.Length())
-         m_sData.assign("");
-      else
-         RemoveAt(0, sPrefix.Length());
+      RemoveAt(0, sPrefix.Length());
+      return true;
+   }
+
+   return false;
+}
+
+bool CHTString::RemoveSuffixNoCase(CHTString sSuffix)
+{
+   if (Length() < sSuffix.Length())
+      return false;
+
+   if (EndsWithNoCase(sSuffix))
+   {
+      RemoveAt(Length()-sSuffix.Length(), sSuffix.Length());
       return true;
    }
 

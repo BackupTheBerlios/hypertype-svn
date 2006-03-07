@@ -830,12 +830,6 @@ CLessonIterator::~CLessonIterator()
 
 bool CLessonIterator::Iterator_Init(CHTString sSettingsFile, CHTString& rsError)
 {
-   if (!ExistFile(GetSettingsDir()) && !CreateDirectory(GetSettingsDir(), 0744))
-   {
-      rsError = "Unable to create settings folder.";
-      return false;
-   }
-
    // The screen creator can specify "Last" as the settings file for a lesson set file to
    // tell us to open the last lesson set.  If they did, we just change ourselves to point
    // to that last lesson set file, and go ahead with the load.  If the setting doesn't
@@ -1353,6 +1347,10 @@ CScreenEngine* CBookTextIterator::Iterator_GetNextScreen(CScreenEngine* pPrevScr
    double dRatio = double(iTotalLessons) / double(iShownLessons);
    pNewScreen->SetIntValue("NumberLessons", iShownLessons);
    pNewScreen->SetIntValue("CurrentLesson", int(iStartingLesson / dRatio) + 1);
+
+   CHTString sLessonTitle = ExtractFileNameFromPath(m_sSettingsFile);
+   (void)sLessonTitle.RemoveSuffixNoCase(".xml");
+   pNewScreen->SetStringValue("Name", FormatString("%s (Lesson %i of %i)", sLessonTitle.GetString(), iStartingLesson+1, iTotalLessons));
 
    rsDisplayFile = m_sDisplayFile;
    return pNewScreen;

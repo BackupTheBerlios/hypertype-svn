@@ -21,12 +21,14 @@
 #include "screen.h"
 
 #include <assert.h>
+#include "file_aid.h"
 #include "game.h"
 #include "menu.h"
 #include "message_box.h"
 #include "lesson.h"
 #include "OS.h"
 #include "widget_display.h"
+#include "widget_settings_file.h"
 #include "xml_aid.h"
 
 bool g_bWindowedMode = false;
@@ -42,6 +44,12 @@ CScreenIterator::~CScreenIterator()
 
 bool CScreenIterator::Init(SDL_Surface* pRootSurface, CHTString sSettingsFile, CHTString& rsError)
 {
+   if (!ExistFile(GetSettingsDir()) && !CreateDirectory(GetSettingsDir(), 0744))
+   {
+      rsError = "Unable to create settings folder.";
+      return false;
+   }
+
    m_pRootSurface = pRootSurface;
    if (!Iterator_Init(sSettingsFile, rsError))
       return false;

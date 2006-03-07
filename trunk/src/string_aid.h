@@ -68,11 +68,12 @@ public:
    bool IsSame(CHTString sOther) const { return (CompareWithCase(sOther) == 0); }
    bool StartsWith(CHTString sOther) const;
    bool StartsWithNoCase(CHTString sOther) const;
+   bool EndsWithNoCase(CHTString sOther) const;
 
    // Retrieval
    CHTString Left(int iChars) const;
-   CHTString Mid(int iStartChar/*0-based*/, int iNumChars=-1);
-   CHTString Right(int iNumChars);
+   CHTString Mid(int iStartChar/*0-based*/, int iNumChars=-1) const;
+   CHTString Right(int iNumChars) const;
    bool Find(CHTString sSearchText, int& iFoundOffset);
    bool Find(CHTString sSearchText, int iSearchStart, int& riFoundOffset);
 
@@ -80,6 +81,7 @@ public:
    int Replace(CHTString sOldText, CHTString sNewText);
    void Clear() { m_sData.clear(); }
    bool RemovePrefixNoCase(CHTString sPrefix); // Removes sPrefix if it exists.  Returns whether it was removed.
+   bool RemoveSuffixNoCase(CHTString sSuffix);
    void RemoveAt(int iIndex, int iCharsToRemove);
    void InsertAt(int iIndex, CHTString sTextToInsert);
 
