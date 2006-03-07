@@ -5,13 +5,14 @@ import templating
 import math
 import shutil
 import re
+import sys
 
 # globals
-booksDir = "./source"
-destDir = "../../lesson_data/books/"
-bookTemplate = "BookTemplate.xml"
-menuFile = "../../screens/practice_menu.xml"
-booksMenuFile = ""
+(workingDir, ignored) = os.path.split(sys.argv[0])
+booksDir = os.path.join(workingDir, "books_source")
+destDir = os.path.join(workingDir, "../lesson_data/books/")
+bookTemplate = os.path.join(workingDir, "BookTemplate.xml")
+menuFile = os.path.join(workingDir, "../screens/practice_menu.xml")
 
 
 def splitBookTextIntoLinesFile(srcFile, destFile):
@@ -45,10 +46,6 @@ def getButtonCoordinates(buttonNumber, totalButtons):
    return (top, left)
 
 
-
-
-
-
 # Get all the book texts
 bookTextFiles = os.listdir(booksDir)
 bookTextFiles = filter(lambda x: x.endswith(".txt"), bookTextFiles)
@@ -57,10 +54,9 @@ thisBookNum = 0
 for bookTextFile in bookTextFiles:
    (ignored, filename) = os.path.split(bookTextFile)
    splitBookTextIntoLinesFile(os.path.join(booksDir,bookTextFile), destDir+filename)
-#   os.spawnlp(os.P_WAIT, "extract_book_phrases.pl", "extract_book_phrases.pl", bookTextFile, "Lines_"+bookTextFile)
 
    # Generate book definition xml file
-   bookTemplate = open("BookTemplate.xml", "r").read()
+   bookTemplate = open(os.path.join(workingDir, "BookTemplate.xml"), "r").read()
    bookDefinition = templating.templateParser().parseTemplate(bookTemplate, bookTextFile=bookTextFile)
    bookDefFile = bookTextFile.replace(".txt", ".xml")
    open(destDir+bookDefFile, "w").write(bookDefinition)
@@ -72,7 +68,7 @@ for bookTextFile in bookTextFiles:
    thisBookNum += 1
 
 # Generate book menu screen
-menuXml = templating.templateParser().parseTemplate(open("MenuTemplate.xml", "r").read(), books=bookDefs)
+menuXml = templating.templateParser().parseTemplate(open(os.path.join(workingDir, "MenuTemplate.xml"), "r").read(), books=bookDefs)
 open(menuFile, "w").write(menuXml)
 
 
