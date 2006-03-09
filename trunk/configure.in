@@ -92,5 +92,5 @@ enable_aggregator="$enableval", enable_aggregator="no")
 
 AM_CONDITIONAL(ENABLE_AGGREGATOR, test "$enable_aggregator" = "yes")
 
-AC_OUTPUT(Makefile src/Makefile src/aggregator/Makefile src/data/Makefile src/data/screens/Makefile src/data/lesson_data/Makefile src/data/fonts/Makefile src/data/images/Makefile src/data/lesson_data/books/Makefile)
+AC_OUTPUT(Makefile src/Makefile src/aggregator/Makefile src/data/Makefile src/data/screens/Makefile src/data/lesson_data/Makefile src/data/fonts/Makefile src/data/images/Makefile src/data/lesson_data/books/Makefile src/data/source_data/Makefile src/data/source_data/books_source/Makefile)
 
