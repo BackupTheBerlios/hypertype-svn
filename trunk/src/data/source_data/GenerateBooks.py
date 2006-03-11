@@ -63,7 +63,7 @@ for bookTextFile in bookTextFiles:
 
    # Organize buttons on book menu screen
    (top, left) = getButtonCoordinates(thisBookNum, len(bookTextFiles))
-   bookDefs.append({"BookName" : bookDefFile, "BookTitle" : bookDefFile.replace(".xml", ""), "top" : str(top), "left" : str(left)})
+   bookDefs.append({"BookName" : bookDefFile, "BookTitle" : bookDefFile.replace(".xml", "").replace("_", " "), "top" : str(top), "left" : str(left)})
 
    thisBookNum += 1
 
