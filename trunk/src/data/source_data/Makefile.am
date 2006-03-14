@@ -7,6 +7,6 @@ EXTRA_DIST = $(source_data_DATA)
 SUBDIRS = books_source
 
 install-data-hook:
-	chmod +x $(source_datadir)/GenerateBooks.py
-	$(source_datadir)/GenerateBooks.py
+	chmod +x $(srcdir)/GenerateBooks.py
+	$(srcdir)/GenerateBooks.py
 
