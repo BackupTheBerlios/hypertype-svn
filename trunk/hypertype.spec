@@ -17,7 +17,7 @@ Source: %{name}-%{version}.tar.gz
 
 
 %prep
-%setup
+%setup -n %name-%version
 CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" ./configure --target=i586 --host=i386 --build=i386-linux --disable-debug --enable-debug=no 
 
 %build
@@ -35,8 +35,9 @@ rm -rf %{buildroot}
 %postun -p /sbin/ldconfig
 %files
 %defattr(-, root, root)
-%doc AUTHORS COPYING ChangeLog NEWS README TODO
+%doc AUTHORS COPYING ChangeLog NEWS README 
 %{_bindir}/*
 %{_datadir}/%{name}
+%{_datadir}/applications/hypertype.desktop
 %changelog
 
