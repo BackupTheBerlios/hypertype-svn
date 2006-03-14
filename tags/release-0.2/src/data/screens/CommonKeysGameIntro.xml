@@ -1,0 +1,7 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>You're now ready to play your first game.  The goal of this game is to prevent the comets from crashing into and destroying the helpless, innocent cities.  To explode a comet, simply type the text on top of it.</text>
+   </widget>
+</display>

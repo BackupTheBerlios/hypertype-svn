@@ -1,0 +1,148 @@
+<!-- All files are relative to screens -->
+<!-- <FailureLesson> is the lesson to go to when the typist does not meet the performance requirements -->
+<!-- <RestartOnFailure> causes the lesson to simply restart if the typist does not meet the performance requirements -->
+<lessons>
+
+<!-- GLOBAL SETTINGS -->
+   <globals>
+      <AccuracyError>There were a lot of mistakes on that lesson.  Let's try it again.</AccuracyError>
+      <SpeedError>Typing rate on that lesson (%speed% WPM) wasn't very fast.  Let's practice some more.</SpeedError>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy.</PostLessonMessage>
+      <RestartOnFailure>yes</RestartOnFailure>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <LineLength>50</LineLength>
+      <MinAccuracy>90</MinAccuracy>
+      <ProblemKeysLesson>no</ProblemKeysLesson>
+   </globals>
+   <ProblemKeysLesson>
+      <Name>ProblemKeys</Name>
+      <type>Practice</type>
+      <DisplayFile>ProblemKeys_display</DisplayFile>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <PreLessonMessage>Some keys gave you more trouble that lesson than others.  Let's practice them.</PreLessonMessage>
+   </ProblemKeysLesson>
+
+<!-- START LESSONS -->
+   <lesson>
+      <Name>NumberKeysIntro</Name>
+      <DisplayFile>NumberKeysIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+
+<!-- 1234 keys -->
+   <lesson>
+      <Name>1234New</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>150</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>1234asdf</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>1234PracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>1234asdf</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>1234PracticeRandom</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>1234asdf</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+
+<!-- 567 keys -->
+   <lesson>
+      <Name>567New</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>567fj</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>567PracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>567fj</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>567PracticeRandom</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>567fj</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+
+<!-- 890 keys -->
+   <lesson>
+      <Name>890New</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>890kl;</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>890PracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>890kl;</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>890PracticeRandom</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>890kl;</keys>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+
+<!-- All Numbers practice -->
+   <lesson>
+      <Name>AllNumbersPracticePhrases</Name>
+      <type>Practice</type>
+      <keys>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.,;:</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>Phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/AllNumberPhrases.txt</PhraseListPath>
+      <MinSpeed>15</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>AllNumbersPracticePhrases2</Name>
+      <type>Practice</type>
+      <keys>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.,;:</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>Phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/AllNumberPhrases.txt</PhraseListPath>
+      <MinSpeed>18</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+</lessons>
+

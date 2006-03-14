@@ -1,0 +1,8 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   Welcome to the home row lesson series.  The home row keys are the keys on the middle row of the keyboard, starting with 'a' and ending with ';'.  In this series of lessons, you be introduced to each of these keys, and have a chance to practice them.  A minimum of 90% accuracy is required, so be sure to focus on accuracy rather than speed.
+      </text>
+   </widget>
+</display>

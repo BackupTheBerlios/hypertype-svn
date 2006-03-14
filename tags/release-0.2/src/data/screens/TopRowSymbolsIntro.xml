@@ -1,0 +1,8 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>   You'll now learn the top row symbols.  Typing these symbols is much like typing numbers, except that you obviously need to use the Shift keys.
+      </text>
+   </widget>
+</display>

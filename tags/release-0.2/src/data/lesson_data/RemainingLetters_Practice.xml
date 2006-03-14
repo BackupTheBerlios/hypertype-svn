@@ -1,0 +1,69 @@
+<!-- All files are relative to screens -->
+<!-- <FailureLesson> is the lesson to go to when the typist does not meet the performance requirements -->
+<!-- <RestartOnFailure> causes the lesson to simply restart if the typist does not meet the performance requirements -->
+<lessons>
+
+<!-- GLOBAL SETTINGS -->
+   <globals>
+      <AccuracyError>There were a lot of mistakes on that lesson.  Let's try it again.</AccuracyError>
+      <SpeedError>Typing rate on that lesson (%speed% WPM) wasn't very fast.  Let's practice some more.</SpeedError>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy.</PostLessonMessage>
+      <RestartOnFailure>yes</RestartOnFailure>
+      <MistakeHandling>Allow Mistakes</MistakeHandling>
+      <LineLength>50</LineLength>
+      <MinAccuracy>90</MinAccuracy>
+      <ProblemKeysLesson>no</ProblemKeysLesson>
+   </globals>
+   <ProblemKeysLesson>
+      <Name>ProblemKeys</Name>
+      <type>Practice</type>
+      <DisplayFile>ProblemKeys_display</DisplayFile>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <PreLessonMessage>Some keys gave you more trouble that lesson than others.  Let's practice them.</PreLessonMessage>
+   </ProblemKeysLesson>
+
+<!-- START LESSONS -->
+   <lesson>
+      <Name>AllLettersWords</Name>
+      <type>Practice</type>
+      <keys></keys>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCumPlusYBQWZXCV.txt</WordListPath>
+      <MinSpeed>15</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>WarOfTheWorldsPhrases</Name>
+      <type>Practice</type>
+      <keys></keys>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/PhrasesAllLetters_WotW.txt</PhraseListPath>
+      <MinSpeed>18</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>TreasureIslandPhrases</Name>
+      <type>Practice</type>
+      <keys></keys>
+      <DisplayFile>Practice_display_no_keyboard</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/PhrasesAllLetters_TreasureIsland.txt</PhraseListPath>
+      <MinSpeed>20</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>PracticeGame</Name>
+      <GameSettingsFile>lesson_data/RemainingLetters_Game.xml</GameSettingsFile>
+   </lesson>
+</lessons>
+

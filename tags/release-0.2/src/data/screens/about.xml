@@ -1,0 +1,30 @@
+<display>
+   <widget>
+      <name>background</name>
+      <type>image</type>
+      <image>images/background.png</image>
+      <top>0</top>
+      <left>0</left>
+   </widget>
+   <widget>
+      <name>description</name>
+      <type>text</type>
+      <top>50</top>
+      <left>70</left>
+      <width>500</width>
+      <height>350</height>
+      <wrap>true</wrap>
+      <text>   HyperType is a ground-up rewrite of the TuxType software (tuxtype.sourceforge.net).  Eventually, HyperType should be a full-fledged typing tutor like Mavis Beacon.
+   In HyperType, all screen layouts, including menus and lessons, are specified in XML. See the screens directory for these layouts.</text>
+   </widget>
+   <widget>
+      <name>menu</name>
+      <type>button</type>
+      <top>350</top>
+      <left>220</left>
+      <upimage>images/btn_up.png</upimage>
+      <downimage>images/btn_down.png</downimage>
+      <label>_Main</label>
+      <action>screen:main</action>
+   </widget>
+</display>

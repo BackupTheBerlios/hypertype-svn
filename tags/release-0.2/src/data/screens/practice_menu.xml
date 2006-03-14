@@ -1,0 +1,85 @@
+<display>
+   <widget>
+      <name>background</name>
+      <type>image</type>
+      <image>images/background.png</image>
+      <top>0</top>
+      <left>0</left>
+   </widget>
+   <widget>
+      <name>title</name>
+      <type>text</type>
+      <top>20</top>
+      <left>200</left>
+      <width>400</width>
+      <height>100</height>
+      <text>Practice Texts</text>
+      <wrap>no</wrap>
+      <fontsize>40</fontsize>
+   </widget>
+      <widget>
+      <name>Ransom Of Red Chief.xml</name>
+      <type>button</type>
+      <top>75</top>
+      <left>55.0</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>Ransom Of Red Chief</label>
+      <action>book:lesson_data/books/Ransom Of Red Chief.xml</action>
+   </widget>
+   
+   <widget>
+      <name>Two Gentlemen.xml</name>
+      <type>button</type>
+      <top>145</top>
+      <left>55.0</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>Two Gentlemen</label>
+      <action>book:lesson_data/books/Two Gentlemen.xml</action>
+   </widget>
+   
+   <widget>
+      <name>The Last Leaf.xml</name>
+      <type>button</type>
+      <top>215</top>
+      <left>55.0</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>The Last Leaf</label>
+      <action>book:lesson_data/books/The Last Leaf.xml</action>
+   </widget>
+   
+   <widget>
+      <name>The Cop And The Anthem.xml</name>
+      <type>button</type>
+      <top>285</top>
+      <left>55.0</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>The Cop And The Anthem</label>
+      <action>book:lesson_data/books/The Cop And The Anthem.xml</action>
+   </widget>
+   
+   <widget>
+      <name>After Twenty Years.xml</name>
+      <type>button</type>
+      <top>75</top>
+      <left>335.0</left>
+      <upimage>images/btn_up_wide.png</upimage>
+      <downimage>images/btn_down_wide.png</downimage>
+      <label>After Twenty Years</label>
+      <action>book:lesson_data/books/After Twenty Years.xml</action>
+   </widget>
+   
+   <widget>
+      <name>back</name>
+      <type>button</type>
+      <top>375</top>
+      <left>220</left>
+      <upimage>images/btn_up.png</upimage>
+      <downimage>images/btn_down.png</downimage>
+      <label>_Back</label>
+      <action>screen:main</action>
+   </widget>
+</display>

@@ -1,0 +1,8 @@
+<display>
+   <include>screens/MessageScreen.xml</include>
+   <widget>
+      <name>description</name>
+      <text>In all practice sets from now on, you will not be required to correct mistakes.  Normal lesson sets will still require you to correct your mistakes.
+      </text>
+   </widget>
+</display>

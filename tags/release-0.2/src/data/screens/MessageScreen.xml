@@ -1,0 +1,40 @@
+<include>
+   <widget>
+      <name>background</name>
+      <type>image</type>
+      <image>images/background.png</image>
+      <top>0</top>
+      <left>0</left>
+   </widget>
+   <widget>
+      <name>description</name>
+      <type>text</type>
+      <top>50</top>
+      <left>70</left>
+      <width>500</width>
+      <height>350</height>
+      <wrap>true</wrap>
+      <text>   This text should be replaced.
+      </text>
+   </widget>
+   <widget>
+      <name>menu</name>
+      <type>button</type>
+      <top>350</top>
+      <left>220</left>
+      <upimage>images/btn_up.png</upimage>
+      <downimage>images/btn_down.png</downimage>
+      <label>_OK</label>
+      <action>LessonComplete</action>
+   </widget>
+   <widget>
+      <name>back</name>
+      <type>button</type>
+      <label>_Back</label>
+      <top>420</top>
+      <left>10</left>
+      <upimage>images/btn_up_small.png</upimage>
+      <downimage>images/btn_down_small.png</downimage>
+      <action>PrevLesson</action>
+   </widget>
+</include>

@@ -1,0 +1,183 @@
+<!-- All files are relative to screens -->
+<!-- <FailureLesson> is the lesson to go to when the typist does not meet the performance requirements -->
+<!-- <RestartOnFailure> causes the lesson to simply restart if the typist does not meet the performance requirements -->
+<lessons>
+
+<!-- GLOBAL SETTINGS -->
+   <globals>
+      <AccuracyError>There were a lot of mistakes on that lesson.  Let's try it again.</AccuracyError>
+      <SpeedError>Typing rate on that lesson (%speed% WPM) wasn't very fast.  Let's practice some more.</SpeedError>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy.</PostLessonMessage>
+      <RestartOnFailure>yes</RestartOnFailure>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <LineLength>50</LineLength>
+      <MinAccuracy>90</MinAccuracy>
+      <ProblemKeysLesson>no</ProblemKeysLesson>
+   </globals>
+   <ProblemKeysLesson>
+      <Name>ProblemKeys</Name>
+      <type>Practice</type>
+      <DisplayFile>ProblemKeys_display</DisplayFile>
+      <TextGenerationStyle>random</TextGenerationStyle>
+      <length>300</length>
+      <MistakeHandling>Must Correct</MistakeHandling>
+      <PreLessonMessage>Some keys gave you more trouble that lesson than others.  Let's practice them.</PreLessonMessage>
+   </ProblemKeysLesson>
+
+<!-- START LESSONS -->
+   <lesson>
+      <Name>RemainingKeysIntro</Name>
+      <DisplayFile>RemainingKeysIntro</DisplayFile>
+      <type>Practice</type>
+      <LessonText></LessonText>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <MinAccuracy>0</MinAccuracy>
+      <PostLessonMessage></PostLessonMessage>
+   </lesson>
+<!-- YB keys -->
+   <lesson>
+      <Name>YBNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>100</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>jhyfgb</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>YBPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>jhyfgb</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>YBCumPracticeWords</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiopnm,.yb</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCumPlusYB.txt</WordListPath>
+      <MinSpeed>13</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+<!-- QW keys -->
+   <lesson>
+      <Name>QWNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>70</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>qwas</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>QWPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>qwas</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>QWCumPracticeWords</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiopnm,.ybqw</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCumPlusQW.txt</WordListPath>
+      <MinSpeed>13</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+<!--   TODO:
+   <lesson>
+      <Name>ERTUIPCumPracticePhrases</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiop</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/PhrasesHomeRowPlusERTUIOP.txt</PhraseListPath>
+      <MinSpeed>10</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <FailureLesson>UIOPCumPracticeWords</FailureLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+-->
+
+<!-- zxcv keys -->
+   <lesson>
+      <Name>ZXCVNew</Name>
+      <type>NewKeys</type>
+      <DisplayFile>NewKeys_display</DisplayFile>
+      <length>70</length>
+      <MistakeHandling>Auto Correct</MistakeHandling>
+      <keys>asdfzxcv</keys>
+      <keydescs>lesson_data/newkey_descs.txt</keydescs>
+      <TextGenerationStyle>random</TextGenerationStyle>
+   </lesson>
+   <lesson>
+      <Name>ZXCVPracticeRepetition</Name>
+      <type>Practice</type>
+      <DisplayFile>Practice_display</DisplayFile>
+      <keys>asdfzxcv</keys>
+      <TextGenerationStyle>repetition</TextGenerationStyle>
+      <length>300</length>
+   </lesson>
+   <lesson>
+      <Name>ZXCVCumPracticeWords</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiopnm,.ybqwzxcv</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCumPlusZXCV.txt</WordListPath>
+      <MinSpeed>13</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>AllLetterPracticeWords</Name>
+      <type>Practice</type>
+      <keys>asdfghjkl;ertuiopnm,.ybqwzxcvYBQWZXCV</keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>words</TextGenerationStyle>
+      <WordListPath>lesson_data/WordsCumPlusRemainingCaps.txt</WordListPath>
+      <MinSpeed>13</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>WarOfTheWorldsPhrases</Name>
+      <type>Practice</type>
+      <keys></keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/PhrasesAllLetters_WotW.txt</PhraseListPath>
+      <MinSpeed>15</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>Congratulations! That lesson was typed with %accuracy%% accuracy at a rate of %speed% WPM.</PostLessonMessage>
+   </lesson>
+   <lesson>
+      <Name>TreasureIslandPhrases</Name>
+      <type>Practice</type>
+      <keys></keys>
+      <DisplayFile>Practice_display_with_WPM</DisplayFile>
+      <length>600</length>
+      <TextGenerationStyle>phrases</TextGenerationStyle>
+      <PhraseListPath>lesson_data/PhrasesAllLetters_TreasureIsland.txt</PhraseListPath>
+      <MinSpeed>15</MinSpeed>
+      <ProblemKeysLesson>yes</ProblemKeysLesson>
+      <PostLessonMessage>You're almost done with the letter keys.  To finish, continue with the remaining keys practice lesson series.</PostLessonMessage>
+   </lesson>
+</lessons>
+

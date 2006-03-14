@@ -1,0 +1,30 @@
+<display>
+   <clearscreen>false</clearscreen>
+   <widget>
+      <name>message box</name>
+      <type>image</type>
+      <image>images/message_box.png</image>
+      <top>130</top>
+      <left>15</left>
+   </widget>
+   <widget>
+      <name>MainText</name>
+      <type>text</type>
+      <text>filler</text>
+      <wrap>true</wrap>
+      <top>140</top>
+      <left>45</left>
+      <width>550</width>
+      <height>150</height>
+   </widget>
+   <widget>
+      <name>OK</name>
+      <type>button</type>
+      <action>OK</action>
+      <label>_OK</label>
+      <top>250</top>
+      <left>220</left>
+      <upimage>images/btn_up.png</upimage>
+      <downimage>images/btn_down.png</downimage>
+   </widget>
+</display>

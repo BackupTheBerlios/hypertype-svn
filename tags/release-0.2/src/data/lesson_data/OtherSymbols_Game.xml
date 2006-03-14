@@ -1,0 +1,9 @@
+<game>
+   <DisplayFile>game</DisplayFile>
+   <WordListPath>lesson_data/GameWordsOtherSymbols.txt</WordListPath>
+   <NumberSprites>6</NumberSprites>
+   <LimitToNumberWords>60</LimitToNumberWords>
+   <PreGameMessage>When you're ready to begin the game, press OK.</PreGameMessage>
+   <PostGameMessage>Congratulations!!!!  You've completed all the lessons!</PostGameMessage>
+</game>
+

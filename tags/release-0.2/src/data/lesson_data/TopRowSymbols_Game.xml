@@ -1,0 +1,9 @@
+<game>
+   <DisplayFile>game</DisplayFile>
+   <WordListPath>lesson_data/GameWordsTopRowSymbols.txt</WordListPath>
+   <NumberSprites>6</NumberSprites>
+   <LimitToNumberWords>60</LimitToNumberWords>
+   <PreGameMessage>When you're ready to begin the game, press OK.</PreGameMessage>
+   <PostGameMessage>Now that you've learned the the top row symbols, continue with the "Remaining Symbols" lessons.  Don't lose hope; you're almost there!</PostGameMessage>
+</game>
+
