@@ -105,9 +105,7 @@ void HandleProgramArguments(int argc, char* const argv[])
 bool EstablishInstanceLock()
 {
    int g_fdInstanceLock = open(GetSettingsFile(), O_RDONLY);
-   if (g_fdInstanceLock == -1)
-      return true; // If the settings file doesn't exist, just say we established a lock.  It isn't perfect, but avoids race condition with trying to create the file.
-   return (flock(g_fdInstanceLock, LOCK_EX|LOCK_NB) != -1);
+   return (flock(g_fdInstanceLock, LOCK_EX|LOCK_NB) != -1 || (errno != EWOULDBLOCK && errno != EINTR));
 }
 
 void MungerDataFilePath(CHTString& rsPath)
