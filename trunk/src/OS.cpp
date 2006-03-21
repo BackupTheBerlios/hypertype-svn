@@ -20,10 +20,12 @@
 
 #include "precompiled.h"
 
+#include <errno.h>
 #include <getopt.h>
 #include <sys/file.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <errno.h>
 
 #include "config.h"
 #include "globals.h"

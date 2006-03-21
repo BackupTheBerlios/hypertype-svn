@@ -28,6 +28,7 @@
 #include <SDL.h>
 #include <SDL_ttf.h>
 
+#include "globals.h"
 #include "lesson.h"
 #include "OS.h"
 #include "screen.h"
@@ -41,6 +42,7 @@ int main(int argc, char *argv[])
    HandleProgramArguments(argc, argv);
 
    TestCHTString();
+   TestDoubleComparison();
 
    if (!EstablishInstanceLock())
    {

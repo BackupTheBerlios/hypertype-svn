@@ -18,10 +18,10 @@ Source: %{name}-%{version}.tar.gz
 
 %prep
 %setup -n %name-%version
-CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" ./configure --target=i586 --host=i386 --build=i386-linux --disable-debug --enable-debug=no
+CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" ./configure
 
 %build
-%configure
+%configure --enable-aggregator
 make
 
 %install
