@@ -20,6 +20,8 @@
 
 bool g_bDebugMode = false;
 
+#include <assert.h>
+
 #include "globals.h"
 
 CHTString TranslateUpperCharIfNecessary(char aChar)
@@ -30,3 +32,42 @@ CHTString TranslateUpperCharIfNecessary(char aChar)
    return aChar;
 }
 
+bool IsDoubleEQ(double d1, double d2, double dThreshold)
+{
+   return (fabs(d1)-fabs(d2)) <= dThreshold;
+}
+
+bool IsDoubleLT(double d1, double d2, double dThreshold)
+{
+   return (d1 - d2) < -dThreshold;
+}
+
+bool IsDoubleGT(double d1, double d2, double dThreshold)
+{
+   return (d1 - d2) > dThreshold;
+}
+
+bool IsDoubleLTE(double d1, double d2, double dThreshold)
+{
+   return (d1 - d2) <= dThreshold;
+}
+
+bool IsDoubleGTE(double d1, double d2, double dThreshold)
+{
+   return (d1 - d2) >= -dThreshold;
+}
+
+
+void TestDoubleComparison()
+{
+   assert(IsDoubleEQ(10, 10.1, 0.2));
+   assert(IsDoubleLT(10, 10.1, 0.05));
+   assert(IsDoubleGT(10.1, 10, 0.05));
+   assert(!IsDoubleLT(10.3, 10, 0.2));
+   assert(!IsDoubleGT(10, 10.3, 0.2));
+   assert(IsDoubleLTE(10, 9.96, 0.05));
+   assert(IsDoubleGTE(9.97, 10, 0.05));
+   assert(!IsDoubleLTE(10, 9.86, 0.05));
+   assert(!IsDoubleGTE(9.87, 10, 0.05));
+   assert(IsDoubleGTE(20.055, 20.1, 0.05));
+}

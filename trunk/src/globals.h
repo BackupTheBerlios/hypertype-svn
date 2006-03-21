@@ -25,3 +25,10 @@ extern bool g_bDebugMode;
 // Translates 'M' to 'upper-m'.  If aChar is not an uppercase letter, it is returned unmodified.
 CHTString TranslateUpperCharIfNecessary(char aChar);
 
+bool IsDoubleEQ(double d1, double d2, double dThreshold);
+bool IsDoubleLT(double d1, double d2, double dThreshold);
+bool IsDoubleGT(double d1, double d2, double dThreshold);
+bool IsDoubleLTE(double d1, double d2, double dThreshold);
+bool IsDoubleGTE(double d1, double d2, double dThreshold);
+
+void TestDoubleComparison();

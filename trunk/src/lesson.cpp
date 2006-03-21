@@ -801,7 +801,7 @@ void CLessonEngine::UpdateLessonStats()
    if (HasDoubleValue("MinSpeed"))
    {
       double dMinSpeed = GetDoubleValue("MinSpeed");
-      if (GetDoubleValue("AdjustedWPM") < dMinSpeed)
+      if (!IsDoubleGTE(GetDoubleValue("AdjustedWPM"), dMinSpeed, 0.05))
       {
          SetBoolValue("PassedRequirements", false);
          SetStringValue("RequirementsError", MungerLessonMessage(GetStringValue("SpeedError")));
