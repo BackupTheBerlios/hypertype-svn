@@ -21,6 +21,7 @@
 bool g_bDebugMode = false;
 
 #include <assert.h>
+#include <math.h>
 
 #include "globals.h"
 

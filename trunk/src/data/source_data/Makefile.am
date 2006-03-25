@@ -8,5 +8,5 @@ SUBDIRS = books_source
 
 install-data-hook:
 	chmod +x $(srcdir)/GenerateBooks.py
-	$(srcdir)/GenerateBooks.py
+	python $(srcdir)/GenerateBooks.py
 
