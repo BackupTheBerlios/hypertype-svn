@@ -71,7 +71,8 @@ bool CScreenIterator::DisplayIteration(CHTString& rsError)
          return false;
       }
 
-      pDisplay->Display(m_pRootSurface);
+      if (!pDisplay->Display(m_pRootSurface))
+         return false;
 
       if (!Iterator_OnScreenEnd(pEngine))
          return true;

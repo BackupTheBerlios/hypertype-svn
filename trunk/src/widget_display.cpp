@@ -127,7 +127,7 @@ bool CWidgetDisplay::InternalLoadFromXml(xmlNode* pSettingsXml, CHTString& rsErr
 }
 
 // Any user action will be stored in the engine, keyed on "action"
-void CWidgetDisplay::Display(SDL_Surface* pEntireScreen)
+bool CWidgetDisplay::Display(SDL_Surface* pEntireScreen)
 {
    if (m_bClearBackground)
       ClearSurface(pEntireScreen);
@@ -151,7 +151,10 @@ void CWidgetDisplay::Display(SDL_Surface* pEntireScreen)
    {
       SDL_Event vEvent;
       while (SDL_PollEvent(&vEvent))
-         HandleEvent(vEvent, &vParms);
+      {
+         if (!HandleEvent(vEvent, &vParms))
+            return false;
+      }
 
       CHTString sAction = m_pEngine->GetStringValue("action", false);
       if (sAction != "")
@@ -167,6 +170,8 @@ void CWidgetDisplay::Display(SDL_Surface* pEntireScreen)
    }
 
    m_pEngine->OnScreenEnd(pEntireScreen);
+
+   return true;
 }
 
 void CWidgetDisplay::PaintAllWidgets(CPaintingParms* pPaintingParms, CScreenEngine* pEngine)
@@ -190,7 +195,7 @@ void CWidgetDisplay::ClearSurface(SDL_Surface* pSurface)
    SDL_UpdateRect(pSurface, vClipRect.x, vClipRect.y, vClipRect.w, vClipRect.h);
 }
 
-void CWidgetDisplay::HandleEvent(SDL_Event vEvent, CPaintingParms* pPaintingParms)
+bool CWidgetDisplay::HandleEvent(SDL_Event vEvent, CPaintingParms* pPaintingParms)
 {
    // Handle keyboard and mouse events
    switch (vEvent.type)
@@ -205,16 +210,18 @@ void CWidgetDisplay::HandleEvent(SDL_Event vEvent, CPaintingParms* pPaintingParm
          OnMouse(vEvent, pPaintingParms);
          break;
 
+      case SDL_QUIT:
+         return false;
+
       default:
          break;
    }
+
+   return true;
 }
 
 void CWidgetDisplay::OnKey(SDL_Event vEvent, CPaintingParms* pPaintingParms)
 {
-   if (vEvent.key.keysym.sym == SDLK_ESCAPE)
-      m_pEngine->SetStringValue("action", "quit");
-
    // Notify the engine first, so it'll be updated by the time the widgets query it
    m_pEngine->OnKey(vEvent.key.keysym);
 

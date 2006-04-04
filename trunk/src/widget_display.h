@@ -37,7 +37,7 @@ public:
    bool LoadFromXml(xmlNode* pXml, CHTString& rsError);
 
 // Any user action will be stored in the engine, keyed on "action"
-   void Display(SDL_Surface* pEntireScreen);
+   bool Display(SDL_Surface* pEntireScreen);
 
 protected:
    bool InternalLoadFromXml(xmlNode* pSettingsXml, CHTString& rsError);
@@ -47,7 +47,7 @@ protected:
    void ClearSurface(SDL_Surface* pSurface);
 
    // Event handling
-   void HandleEvent(SDL_Event vEvent, CPaintingParms* pPaintingParms);
+   bool HandleEvent(SDL_Event vEvent, CPaintingParms* pPaintingParms);
    void OnKey(SDL_Event vEvent, CPaintingParms* pPaintingParms);
    void OnMouse(SDL_Event vEvent, CPaintingParms* pPaintingParms);
    void OnTimer(CPaintingParms* pPaintingParms);
