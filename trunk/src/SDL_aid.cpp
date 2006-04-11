@@ -344,7 +344,11 @@ char TranslateKeysymToChar(SDL_keysym vKey)
       char aKey = (char)vKey.sym;
       if (isalpha(aKey))
          return toupper(aKey);
+   }
 
+   if (vKey.mod & KMOD_LSHIFT || vKey.mod & KMOD_RSHIFT)
+   {
+      char aKey = (char)vKey.sym;
       for (int iConversion = 0; iConversion < iNumConversions_c; iConversion++)
       {
          if (aKey == aCharConversions_c[iConversion][0])
