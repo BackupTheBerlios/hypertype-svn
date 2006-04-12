@@ -59,6 +59,7 @@ int main(int argc, char *argv[])
       SDL_Quit();
       return 1;
    }
+   SDL_EnableUNICODE(SDL_ENABLE);
    int iScreenOptions = SDL_SWSURFACE | SDL_HWPALETTE;
    if (!g_bWindowedMode)
       iScreenOptions |= SDL_FULLSCREEN;

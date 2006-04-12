@@ -153,6 +153,7 @@ CAggregatorEngine::CAggregatorEngine()
 
 CAggregatorEngine::~CAggregatorEngine()
 {
+   ResetBuildData();
 }
 
 bool CAggregatorEngine::InitializeFromDataFiles(CHTStringArray asDataFilePaths, CHTArray<CKeyedValues> aCorrespondingData, CDataModifier* pDataModifier, CHTString& rsError)

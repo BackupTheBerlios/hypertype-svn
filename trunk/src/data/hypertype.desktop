@@ -8,5 +8,5 @@ Icon=bogus.xpm
 Exec=hypertype
 TryExec=hypertype
 Terminal=false
-Categories=Application;Education
+Categories=Education
 StartupNotify=false

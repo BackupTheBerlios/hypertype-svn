@@ -14,8 +14,8 @@ iScreenOptions |= sdl_fullscreen
 "The \"widget text\" setting was not specified."
 The value for setting \"" + sKey + "\" is not a valid double."
 The path to the file is C:\documents\YearEndStatements.txt.
-<SpriteImages>images/comet1.png| images/comet2.png|images/comet3.png</SpriteImages>
-<SpriteDestructionImages>images/ cometex1.png|images/cometex2.png</SpriteDestructionImages>
+<SpriteImages>images/comet1.png| images/comet2.png|images/comet3.png </SpriteImages>
+<SpriteDestructionImages>images/ cometex1.png|images/cometex2.png </SpriteDestructionImages>
 Why are we typing all these symbols?
 Are you tired of typing all these symbols?
 Is this a sentence with a question mark?

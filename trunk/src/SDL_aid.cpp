@@ -339,6 +339,13 @@ const int iNumConversions_c = sizeof(aCharConversions_c) / sizeof(char) / 2;
 
 char TranslateKeysymToChar(SDL_keysym vKey)
 {
+   // If using unicode works, use it.  Otherwise, fall back to the manual handling of shift and Caps Lock keys
+   if (vKey.unicode > 0 && vKey.unicode < 0x80)
+      return (char)vKey.unicode;
+
+   cout << "Key: " << (char)vKey.unicode << endl;
+   if (vKey.mod & KMOD_CAPS)
+      cout << "CAPS LOCK!!" << endl;
    if (vKey.mod & KMOD_LSHIFT || vKey.mod & KMOD_RSHIFT || vKey.mod & KMOD_CAPS)
    {
       char aKey = (char)vKey.sym;
