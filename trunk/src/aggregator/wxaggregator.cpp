@@ -22,7 +22,7 @@ wxString* HTStringArrayToWXStringArray(const CHTStringArray& rasArray_c)
 
 bool wxaggregatorapp::OnInit()
 {
-   wxaggregatorFrame *pTheFrame = new wxaggregatorFrame(wxT( "HyperType data aggregator" ), wxPoint(50,50), wxSize(550,340));
+   wxaggregatorFrame *pTheFrame = new wxaggregatorFrame(wxT( "HyperType data aggregator" ), wxPoint(50,50), wxSize(450,340));
 
    pTheFrame->Show(TRUE);
    SetTopWindow(pTheFrame);

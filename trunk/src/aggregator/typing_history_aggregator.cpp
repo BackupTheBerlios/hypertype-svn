@@ -152,6 +152,8 @@ bool CTypingHistoryAggregator::Build_CustomSettings(CHTString sUserFilter, CHTSt
    m_aFieldsForLastBuild.Add(CFieldDefinition("accuracy", "Accuracy\n%", EDataType_Number, ETotalType_Average, true));
    m_aFieldsForLastBuild.Add(CFieldDefinition("completion", "%\nComplete", EDataType_Number, ETotalType_Average, true));
    m_aFieldsForLastBuild.Add(CFieldDefinition("AdjustedWPM", "Speed", EDataType_Number, ETotalType_Average, true));
+   if (!m_bTotalsOnlyLastBuild)
+      m_aFieldsForLastBuild.Add(CFieldDefinition("PassedRequirements", "Passed\nLesson", EDataType_String, ETotalType_None, false));
    m_aFieldsForLastBuild.Add(CFieldDefinition("totallessons", "Total\nLessons", EDataType_Number, ETotalType_Sum, false));
 
    return m_Aggregator.Build(m_aFieldsForLastBuild, m_SubsetForLastBuild, m_GroupingsForLastBuild, rsError);

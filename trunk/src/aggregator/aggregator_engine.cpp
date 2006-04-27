@@ -187,6 +187,8 @@ bool CAggregatorEngine::InitializeFromDataFiles(CHTStringArray asDataFilePaths, 
 
          pDataElem = pDataElem->next;
       }
+
+      xmlFreeDoc(pDoc);
    }
 
    return true;
