@@ -507,6 +507,9 @@ bool CLessonEngine::SaveLessonPerformance(CHTString& rsError)
    if (GetStringValue("ProblemKeys", false) != "")
       xmlNewTextChild(pNodeRoot, NULL, BAD_CAST "ProblemKeys", BAD_CAST GetStringValue("ProblemKeys").GetString());
 
+   bool bPassedLesson = (GetStringValue("RequirementsError") == "" && IsDoubleEQ(GetDoubleValue("CompletionPercentage"), 100, 0.01));
+   xmlNewTextChild(pNodeRoot, NULL, BAD_CAST "PassedRequirements", BAD_CAST BoolToString(bPassedLesson).GetString());
+
 
    xmlSaveFormatFile(GetLessonHistoryPath(), pDoc, 1);
    xmlFreeDoc(pDoc);
