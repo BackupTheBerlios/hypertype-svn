@@ -210,9 +210,6 @@ bool CWidgetDisplay::HandleEvent(SDL_Event vEvent, CPaintingParms* pPaintingParm
          OnMouse(vEvent, pPaintingParms);
          break;
 
-      case SDL_QUIT:
-         return false;
-
       default:
          break;
    }
@@ -222,6 +219,9 @@ bool CWidgetDisplay::HandleEvent(SDL_Event vEvent, CPaintingParms* pPaintingParm
 
 void CWidgetDisplay::OnKey(SDL_Event vEvent, CPaintingParms* pPaintingParms)
 {
+   if (vEvent.key.keysym.sym == SDLK_ESCAPE)
+      m_pEngine->SetStringValue("action", "quit");
+
    // Notify the engine first, so it'll be updated by the time the widgets query it
    m_pEngine->OnKey(vEvent.key.keysym);
 

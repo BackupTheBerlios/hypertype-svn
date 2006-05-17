@@ -39,7 +39,13 @@ class CMessageBoxEngine : public CScreenEngine
          SetStringValue("MainText:Text", g_sMessageBoxText);
          return true;
       }
-      virtual void OnKey(SDL_keysym vKey) {}
+      virtual void OnKey(SDL_keysym vKey)
+      {
+         if (vKey.sym == SDLK_RETURN)
+         {
+            SetStringValue("Action", "OK");
+         }
+      }
       virtual void OnMouse(SDL_Event vMouse) {}
       virtual void OnTimer() {}
 };
