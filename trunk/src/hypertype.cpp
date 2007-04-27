@@ -53,19 +53,20 @@ int main(int argc, char *argv[])
    srand(time(NULL));
 
    /* Initialize video and TTF font support */
-   if(SDL_Init(SDL_INIT_VIDEO) < 0 || TTF_Init() < 0)
+   CHTString sError;
+   if (!InitializeSDL(sError))
    {
-      cout << "Could not initialize SDL:" << SDL_GetError() << endl;
+      cout << "Could not initialize SDL:" << sError << endl;
       SDL_Quit();
       return 1;
    }
+   
    SDL_EnableUNICODE(SDL_ENABLE);
    int iScreenOptions = SDL_SWSURFACE | SDL_HWPALETTE;
    if (!g_bWindowedMode)
       iScreenOptions |= SDL_FULLSCREEN;
    SDL_Surface* pMainScreen = SDL_SetVideoMode(640, 480, 16, iScreenOptions);
 
-   CHTString sError;
    CScreenIterator* pMainIterator = GetMenuIterator();
    if (!pMainIterator->Init(pMainScreen, "", sError) ||
        !pMainIterator->DisplayIteration(sError))

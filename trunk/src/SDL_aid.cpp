@@ -27,6 +27,32 @@
 #include "string_aid.h"
 #include "SDL_aid.h"
 
+bool g_bUseBlendedText = false;
+
+bool InitializeSDL(CHTString& rsError)
+{
+   if(SDL_Init(SDL_INIT_VIDEO) < 0 || TTF_Init() < 0)
+   {
+      rsError = SDL_GetError();
+      return false;
+   }
+      
+   TTF_Font* pFont = LoadFont("fonts/menu.ttf", 15, rsError);
+   if (!pFont)
+   {
+      rsError = "Unable to load font for initialization: " + rsError;
+      return false;
+   }
+   
+   SDL_Surface* pTestSurface = TTF_RenderText_Solid(pFont, "a b", SDLColorFromRGB(0, 0, 0));
+   if (!pTestSurface)
+      g_bUseBlendedText = true;
+      
+   SDL_FreeSurface(pTestSurface);
+      
+   return true;
+}
+
 SDL_Surface* LoadImage(CHTString sImagePath, CHTString& rsLoadError)
 {
    MungerDataFilePath(sImagePath);
@@ -132,10 +158,20 @@ CHTString CalcTextLine(CHTString sEntireText, TTF_Font* pTextFont, int iMaxWidth
    }
 }
 
+void UseBlendedTextDraw(bool bUseBlended)
+{
+   g_bUseBlendedText = bUseBlended;
+}
+
 bool DrawText(CHTString sLine, SDL_Surface* pSurface, TTF_Font* pTextFont, SDL_Color vTextColor,
               SDL_Rect& vDrawingRect, ETextHAlign eHAlignment, ETextVAlign eVAlignment)
 {
-   SDL_Surface* pText = TTF_RenderText_Solid(pTextFont, sLine, vTextColor);
+   SDL_Surface* pText = NULL;
+   if (g_bUseBlendedText)
+      pText = TTF_RenderText_Blended(pTextFont, sLine, vTextColor);
+   else
+      pText = TTF_RenderText_Solid(pTextFont, sLine, vTextColor);
+   
    if (!pText)
       return false;
 

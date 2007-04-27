@@ -42,6 +42,8 @@ enum ETextVAlign
 
 class SDL_Surface;
 
+bool InitializeSDL(CHTString& rsError);
+
 // Image should be freed with SDL_FreeSurface
 SDL_Surface* LoadImage(CHTString sImagePath, CHTString& rsLoadError);
 TTF_Font* LoadFont(CHTString sFontPath, int iTextHeight, CHTString& rsLoadError);
